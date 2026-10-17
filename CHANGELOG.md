@@ -2,6 +2,11 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.5.1 — 2026-10-17
+
+- Corrected the interactive screening-tools page so its engineering guidance and links render as HTML on GitHub Pages.
+- Added a browser-page regression test and made the documentation workflow run the full local test suite.
+
 ## 0.5.0 — 2026-10-17
 
 - Added an engineering-problem entry page, local transparent screening calculators, and application-specific routes from first question to next evidence step.

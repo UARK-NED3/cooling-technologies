@@ -13,11 +13,11 @@ title: Engineering screening tools
   .tool-result[data-status="error"] { background: #fff4f4; border-left-color: #b00020; }
 </style>
 
-# Engineering screening tools
+<h1>Engineering screening tools</h1>
 
-These browser-based tools support transparent first-pass calculations. They do not transmit or save your inputs. Every result is **derived, screening-level evidence**: use actual fluid properties, geometry, operating state, pressure drop, controls, safety requirements, and validation before design or procurement.
+<p>These browser-based tools support transparent first-pass calculations. They do not transmit or save your inputs. Every result is <strong>derived, screening-level evidence</strong>: use actual fluid properties, geometry, operating state, pressure drop, controls, safety requirements, and validation before design or procurement.</p>
 
-All inputs use SI units. Record the system boundary, source, units, and evidence status of each input in the [assumption and evidence register](templates/assumption-evidence-register.md).
+<p>All inputs use SI units. Record the system boundary, source, units, and evidence status of each input in the <a href="templates/assumption-evidence-register.html">assumption and evidence register</a>.</p>
 
 <div class="tool-grid">
   <form class="tool-card" data-calculator="resistance">
@@ -70,13 +70,15 @@ All inputs use SI units. Record the system boundary, source, units, and evidence
   </form>
 </div>
 
-## Interpretation and limits
+<h2>Interpretation and limits</h2>
 
-- A thermal-resistance result represents the stated source-to-sink path; it does not establish a junction, interface, local-fluid, or component-case temperature unless those locations and resistances are explicitly in the model.
-- The liquid-flow calculation gives an average energy-balance target. It does not determine pump head, local convection, branch distribution, pressure drop, cavitation margin, material compatibility, or component temperature.
-- The storage calculation assumes all stored energy reaches a uniform thermal mass over the stated temperature change. It ignores rate limits, packaging, heat loss, and recharge.
-- The COP calculation is comparable only when cooling duty, electrical input, source/sink state, part-load condition, and time basis match.
+<ul>
+  <li>A thermal-resistance result represents the stated source-to-sink path; it does not establish a junction, interface, local-fluid, or component-case temperature unless those locations and resistances are explicitly in the model.</li>
+  <li>The liquid-flow calculation gives an average energy-balance target. It does not determine pump head, local convection, branch distribution, pressure drop, cavitation margin, material compatibility, or component temperature.</li>
+  <li>The storage calculation assumes all stored energy reaches a uniform thermal mass over the stated temperature change. It ignores rate limits, packaging, heat loss, and recharge.</li>
+  <li>The COP calculation is comparable only when cooling duty, electrical input, source/sink state, part-load condition, and time basis match.</li>
+</ul>
 
-Use the [validation ladder](validation-ladder.md) to choose the next evidence step, or return to [Start by engineering problem](engineering-start-here.md).
+<p>Use the <a href="validation-ladder.html">validation ladder</a> to choose the next evidence step, or return to <a href="engineering-start-here.html">Start by engineering problem</a>.</p>
 
 <script type="module" src="assets/screening-calculators.mjs"></script>
