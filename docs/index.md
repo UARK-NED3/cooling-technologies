@@ -6,6 +6,8 @@ Cooling is the purposeful removal, transport, or rejection of thermal energy so 
 
 This self-paced module develops a mechanism-first answer to that question. It treats cooling as an energy and heat-transfer problem before introducing equipment categories. Use the [self-paced study manual](self-paced-study-manual.md) for a guided independent-study sequence with calculations, readiness checks, and a final screening memo.
 
+Arriving with a live engineering question? Begin with [Start by engineering problem](engineering-start-here.md), then use the local [engineering screening tools](engineering-tools.html) and the [validation ladder](validation-ladder.md) to identify the next credible evidence step.
+
 ## Audience and prerequisites
 
 The intended audience is an upper-level undergraduate, early-career engineer, or technical professional. Learners should be comfortable with algebra, units, and basic ideas of energy conservation. Prior heat-transfer coursework is helpful but not required.
@@ -47,6 +49,14 @@ Repository-authored content is available under [CC BY 4.0](../LICENSE). Before r
 | [4. System architectures](modules/04-system-architectures.md) | How are components connected into a system? | An architecture sketch |
 | [5. Performance and energy](modules/05-performance-energy-sustainability.md) | What does useful cooling cost in energy and resources? | A metric set |
 | [6. Screening-level decision](modules/06-screening-decision.md) | Which concept should move to detailed study? | A traceable concept memo |
+
+## Engineering workspace
+
+- [Start by engineering problem](engineering-start-here.md): application-based entry routes for component, loop, immersion, facility, refrigeration, and evidence questions.
+- [Engineering screening tools](engineering-tools.html): local calculations for resistance, temperature rise, liquid flow, thermal storage, and declared-boundary COP.
+- [Templates](templates/cooling-problem-definition.md): traceable problem-definition, evidence-register, validation-plan, and review materials.
+- [Cold-plate CFD screening case](case-studies/cold-plate-cfd-screening.md): a public-data case study with explicit model limits.
+- [Validation ladder](validation-ladder.md): match the claim to the current evidence and next verification step.
 
 ## Use and safety boundary
 

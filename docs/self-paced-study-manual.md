@@ -23,6 +23,8 @@ Create a study record with the following fields. Keep each value with its unit, 
 
 When a value is unavailable, write “unavailable”; do not replace it with an unstated estimate. That practice makes the next measurement or source check visible.
 
+For a concise problem-first route, use [Start by engineering problem](engineering-start-here.md). The [engineering screening tools](engineering-tools.html) provide local, unit-explicit calculations that you can record in this study log.
+
 ## Ten- to eleven-hour study plan
 
 | Session | Time | Study work | Tangible output |

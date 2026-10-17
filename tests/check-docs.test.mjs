@@ -20,4 +20,8 @@ test('professional-education governance files remain release requirements', (t) 
   assert.ok(errors.includes('Missing required file: docs/maintenance-and-governance.md'));
   assert.ok(errors.includes('Missing required file: docs/ned3-applied-examples.md'));
   assert.ok(errors.includes('Missing required file: docs/self-paced-study-manual.md'));
+  assert.ok(errors.includes('Missing required file: docs/engineering-start-here.md'));
+  assert.ok(errors.includes('Missing required file: docs/engineering-tools.html'));
+  assert.ok(errors.includes('Missing required file: docs/validation-ladder.md'));
+  assert.ok(errors.includes('Missing required file: docs/case-studies/cold-plate-cfd-screening.md'));
 });

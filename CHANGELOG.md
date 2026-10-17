@@ -2,6 +2,12 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.5.0 — 2026-10-17
+
+- Added an engineering-problem entry page, local transparent screening calculators, and application-specific routes from first question to next evidence step.
+- Added reusable problem-definition, evidence-register, validation-plan, and screening-review templates.
+- Added a validation ladder and a public cold-plate CFD case study that distinguishes simulated evidence from design qualification.
+
 ## 0.4.0 — 2026-10-17
 
 - Added a self-paced study manual that organizes the six modules into an independent-study pathway with explicit outputs, worked reasoning checks, and a screening-memo completion standard.

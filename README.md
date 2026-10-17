@@ -6,7 +6,7 @@ This repository is the course home. It is structured for direct reading on GitHu
 
 ## Start here
 
-Open the [course home](docs/index.md), then follow the six modules in sequence. Each module includes learning objectives, a conceptual lesson, a worked engineering check, common failure modes, and a transfer task.
+Open the [course home](docs/index.md), then follow the six modules in sequence. Each module includes learning objectives, a conceptual lesson, a worked engineering check, common failure modes, and a transfer task. Engineers arriving with a specific problem can instead use [Start by engineering problem](docs/engineering-start-here.md), the local [screening tools](docs/engineering-tools.html), and the [validation ladder](docs/validation-ladder.md).
 
 ## Scope and evidence status
 
@@ -29,6 +29,10 @@ For primary references, property tools, and evidence practices, see [References 
 For independent learners, the [self-paced study manual](docs/self-paced-study-manual.md) provides a 10–11-hour sequence with worked checks, evidence records, and a screening-level concept memo. The repository also includes a four-hour, instructor-led [electronics thermal-design workshop](docs/professional-workshop.md), [assessment and cases](docs/assessment.md), and [facilitator guide](docs/facilitator-guide.md). The structure is designed for professional education, but it is not an ECTC, ITherm, IEEE, ASHRAE, or University of Arkansas course, and it confers no credential by itself.
 
 The [NED3 applied examples](docs/ned3-applied-examples.md) connect the workshop to public cold-plate CFD, synthetic data-center, and experimental-protocol resources while preserving source, license, and validation boundaries.
+
+## Engineering workspace
+
+The repository includes a [cooling problem-definition template](docs/templates/cooling-problem-definition.md), [assumption and evidence register](docs/templates/assumption-evidence-register.md), [validation-plan template](docs/templates/validation-plan.md), [design-review checklist](docs/templates/design-review-checklist.md), and a public [cold-plate CFD screening case](docs/case-studies/cold-plate-cfd-screening.md). These materials support traceable screening work; they are not design approval or qualification evidence.
 
 ## Release and maintenance
 

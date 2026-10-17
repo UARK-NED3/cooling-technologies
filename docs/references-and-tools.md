@@ -17,6 +17,8 @@ The [evidence map](evidence-map.md) identifies which relations in this course ar
 
 The [NED3 applied examples](ned3-applied-examples.md) provide source-bounded activities based on NED3 public datasets and software, alongside an instructor-only local inventory case. They are organized by evidence class rather than by laboratory branding.
 
+The local [engineering screening tools](engineering-tools.html) provide transparent first-pass calculations. Record their inputs and limits with the [assumption and evidence register](templates/assumption-evidence-register.md), then use the [validation ladder](validation-ladder.md) before extending a result into a design claim.
+
 | Course material | Primary teaching reference | Design-use source still required |
 | --- | --- | --- |
 | Module 1 energy balances | Thermodynamics text above | Actual boundary, flow states, measurements, and duty cycle |

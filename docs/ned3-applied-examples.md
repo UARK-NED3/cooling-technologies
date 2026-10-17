@@ -59,3 +59,5 @@ The [Data Center Cooling Explorer](https://github.com/UARK-NED3/Data-Center-Cool
 - Do not load serialized model artifacts from an untrusted source. In particular, Python pickle files can execute code when loaded.
 - Do not publish, attach, or commit raw local laboratory data, proprietary geometry, participant work, or credentials to this course repository.
 - Use the examples to practice model boundaries, units, evidence status, and next-step validation—not to certify a component, cooling system, or safety condition.
+
+For a complete public-data example, use the [cold-plate CFD screening case](case-studies/cold-plate-cfd-screening.md). It shows how to convert a dataset card into a bounded engineering conclusion and validation plan.
