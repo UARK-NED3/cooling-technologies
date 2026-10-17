@@ -19,6 +19,8 @@ You will distinguish sensible and latent heat, use simple heat-transfer relation
 
 Here `k` is thermal conductivity, `h` is convective heat-transfer coefficient, `A` is the relevant area, `L` is a conduction length, `ε` is emissivity, `σ` is the Stefan–Boltzmann constant, and `h_fg` is latent enthalpy. Temperatures in the radiation relation must be absolute temperatures in kelvin.
 
+The radiation relation is a screening form for a small, isothermal gray surface exchanging with a large, isothermal enclosure whose effective view factor is one. For multiple finite surfaces, partial view, or strong reflections, use view factors and a radiation-network or radiosity model. The phase-change relation assumes the stream completely evaporates or condenses at the stated saturation pressure. If vapor quality changes from `x_in` to `x_out`, use the more general screening relation `Q̇ = ṁ (x_out − x_in) h_fg`, with `h_fg` evaluated at the applicable pressure.
+
 ## Thermal resistance
 
 When a heat-flow path is approximately linear over the operating range,

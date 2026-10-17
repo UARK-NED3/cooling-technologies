@@ -10,9 +10,15 @@ By the end of this module, you can define a cooling problem with a system bounda
 
 ## Start with the energy balance
 
-For a control volume with negligible changes in kinetic and potential energy,
+For a **closed, lumped system with no mass crossing the boundary** and negligible changes in kinetic and potential energy,
 
 `dU/dt = Q̇_in − Q̇_out + Ẇ_in − Ẇ_out`
+
+This is a stored-energy balance, not the general energy balance for a flowing control volume. If mass crosses the boundary, its enthalpy flow must be included. With heat positive into the control volume and work positive out of it, a common form is
+
+`dE_cv/dt = Q̇ − Ẇ + Σ ṁ_in (h + V²/2 + gz)_in − Σ ṁ_out (h + V²/2 + gz)_out`
+
+Use the simplest boundary that represents the physical question. The closed-system form is useful for a short transient or thermal-mass estimate; the flowing form is required for a pump loop, ventilation stream, or refrigeration component.
 
 For many cooling problems, it is useful to group internal electrical, chemical, or mechanical dissipation into a heat-generation term `Q̇_gen`. At steady state, a simple statement becomes
 

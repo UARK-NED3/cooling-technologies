@@ -41,11 +41,11 @@ This relation determines the average fluid temperature rise, not the maximum com
 
 ### Worked check
 
-A water-based loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative `c_p = 4.0 kJ/(kg K)`,
+A single-phase liquid-water loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative `c_p = 4.0 kJ/(kg K)`,
 
 `ṁ = 5000 / [(4000)(5)] = 0.25 kg/s`
 
-The calculation establishes a first-pass mass-flow target. It does **not** provide the required pump head: that depends on pipe geometry, fittings, cold plates, flow regime, fluid properties at the operating state, and parallel-branch distribution.
+The value is an assumed near-ambient liquid-water property for this **illustrative screening calculation**. It is not applicable without revision to a glycol mixture, dielectric fluid, refrigerant, or water at a materially different state. The calculation establishes a first-pass mass-flow target. It does **not** provide the required pump head: that depends on pipe geometry, fittings, cold plates, flow regime, fluid properties at the operating state, and parallel-branch distribution.
 
 ## Controls are part of the thermal architecture
 
