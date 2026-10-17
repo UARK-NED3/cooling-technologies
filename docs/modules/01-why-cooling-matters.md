@@ -12,15 +12,11 @@ By the end of this module, you can define a cooling problem with a system bounda
 
 For a control volume with negligible changes in kinetic and potential energy,
 
-\[
-\frac{dU}{dt}=\dot Q_{in}-\dot Q_{out}+\dot W_{in}-\dot W_{out}.
-\]
+`dU/dt = Q̇_in − Q̇_out + Ẇ_in − Ẇ_out`
 
-For many cooling problems, it is useful to group internal electrical, chemical, or mechanical dissipation into a heat-generation term \(\dot Q_{gen}\). At steady state, a simple statement becomes
+For many cooling problems, it is useful to group internal electrical, chemical, or mechanical dissipation into a heat-generation term `Q̇_gen`. At steady state, a simple statement becomes
 
-\[
-\dot Q_{removed}=\dot Q_{gen}+\dot Q_{from\ surroundings}.
-\]
+`Q̇_removed = Q̇_gen + Q̇_from surroundings`
 
 The equality does not say that all heat-transfer paths are equally important. It says that a sustained temperature requires heat to leave at the same average rate that it enters or is generated.
 
@@ -41,13 +37,11 @@ Temperature is an intensive state variable; heat is energy in transit. A system 
 
 ## Worked check: a small enclosure
 
-An electronic enclosure dissipates \(\dot Q_{gen}=120\ \mathrm{W}\). Its surface exchanges heat with room air at \(25\ ^\circ\mathrm{C}\). The component requirement is initially stated only as “keep it cool.” That statement is incomplete. A usable preliminary requirement might be: keep the maximum component case temperature below \(60\ ^\circ\mathrm{C}\) during continuous operation in \(25\ ^\circ\mathrm{C}\) room air.
+An electronic enclosure dissipates `Q̇_gen = 120 W`. Its surface exchanges heat with room air at `25 °C`. The component requirement is initially stated only as “keep it cool.” That statement is incomplete. A usable preliminary requirement might be: keep the maximum component case temperature below `60 °C` during continuous operation in `25 °C` room air.
 
-The permitted temperature rise is \(35\ \mathrm{K}\). The next module turns that limit into an allowable total thermal resistance:
+The permitted temperature rise is `35 K`. The next module turns that limit into an allowable total thermal resistance:
 
-\[
-R_{th,allow}=\frac{60-25}{120}=0.292\ \mathrm{K/W}.
-\]
+`R_th,allow = (60 − 25) / 120 = 0.292 K/W`
 
 This is a **derived, screening-level** target. It is not enough to select hardware because contact resistance, airflow, radiation, and internal heat spreading have not yet been modeled.
 

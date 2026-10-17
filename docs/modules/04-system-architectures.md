@@ -35,19 +35,15 @@ The chain is only as strong as its most restrictive link. A high-performance col
 
 For a well-mixed liquid stream that gains heat from a load,
 
-\[
-\dot Q_{load}=\dot m c_p(T_{out}-T_{in}).
-\]
+`Q̇_load = ṁ c_p (T_out − T_in)`
 
 This relation determines the average fluid temperature rise, not the maximum component temperature. That maximum also depends on the local heat-transfer coefficient, contact resistance, flow maldistribution, and transient behavior.
 
 ### Worked check
 
-A water-based loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative \(c_p=4.0\ \mathrm{kJ/(kg\,K)}\),
+A water-based loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative `c_p = 4.0 kJ/(kg K)`,
 
-\[
-\dot m=\frac{5000}{(4000)(5)}=0.25\ \mathrm{kg/s}.
-\]
+`ṁ = 5000 / [(4000)(5)] = 0.25 kg/s`
 
 The calculation establishes a first-pass mass-flow target. It does **not** provide the required pump head: that depends on pipe geometry, fittings, cold plates, flow regime, fluid properties at the operating state, and parallel-branch distribution.
 

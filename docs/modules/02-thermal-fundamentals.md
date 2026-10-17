@@ -12,26 +12,22 @@ You will distinguish sensible and latent heat, use simple heat-transfer relation
 
 | Mechanism | Simplified relation | Governing idea |
 | --- | --- | --- |
-| Conduction | \(\dot Q=kA\Delta T/L\) | Energy diffuses through a material. |
-| Convection | \(\dot Q=hA(T_s-T_\infty)\) | A fluid transports heat from a surface. |
-| Radiation | \(\dot Q=\varepsilon\sigma A(T_s^4-T_{sur}^4)\) | Surfaces exchange thermal radiation. |
-| Phase change | \(\dot Q=\dot m h_{fg}\) | Energy is absorbed or released at nearly constant temperature for a specified pressure. |
+| Conduction | `Q̇ = k A ΔT / L` | Energy diffuses through a material. |
+| Convection | `Q̇ = h A (T_s − T_∞)` | A fluid transports heat from a surface. |
+| Radiation | `Q̇ = ε σ A (T_s⁴ − T_sur⁴)` | Surfaces exchange thermal radiation. |
+| Phase change | `Q̇ = ṁ h_fg` | Energy is absorbed or released at nearly constant temperature for a specified pressure. |
 
-Here \(k\) is thermal conductivity, \(h\) is convective heat-transfer coefficient, \(A\) is the relevant area, \(L\) is a conduction length, \(\varepsilon\) is emissivity, \(\sigma\) is the Stefan–Boltzmann constant, and \(h_{fg}\) is latent enthalpy. Temperatures in the radiation relation must be absolute temperatures in kelvin.
+Here `k` is thermal conductivity, `h` is convective heat-transfer coefficient, `A` is the relevant area, `L` is a conduction length, `ε` is emissivity, `σ` is the Stefan–Boltzmann constant, and `h_fg` is latent enthalpy. Temperatures in the radiation relation must be absolute temperatures in kelvin.
 
 ## Thermal resistance
 
 When a heat-flow path is approximately linear over the operating range,
 
-\[
-R_{th}=\frac{\Delta T}{\dot Q}\quad [\mathrm{K/W}].
-\]
+`R_th = ΔT / Q̇  [K/W]`
 
-Useful forms are \(R_{cond}=L/(kA)\) and \(R_{conv}=1/(hA)\). Resistances in series add. Parallel paths must be combined by conductance:
+Useful forms are `R_cond = L / (k A)` and `R_conv = 1 / (h A)`. Resistances in series add. Parallel paths must be combined by conductance:
 
-\[
-\frac{1}{R_{eq}}=\sum_i\frac{1}{R_i}.
-\]
+`1 / R_eq = Σᵢ (1 / Rᵢ)`
 
 This analogy is useful, but it has limits. Material properties, flow behavior, contact pressure, and radiation can change with temperature. Use a resistance network to identify dominant paths, then improve the model when its assumptions no longer hold.
 
@@ -39,31 +35,25 @@ This analogy is useful, but it has limits. Material properties, flow behavior, c
 
 Suppose the 120 W enclosure in Module 1 has these proposed series resistances:
 
-\[
-R_{source-interface}=0.05\ \mathrm{K/W},\quad R_{spreader}=0.04\ \mathrm{K/W},\quad R_{air-side}=0.18\ \mathrm{K/W}.
-\]
+`R_source–interface = 0.05 K/W; R_spreader = 0.04 K/W; R_air-side = 0.18 K/W`
 
-The series total is \(0.27\ \mathrm{K/W}\), giving an estimated source-to-room rise of
+The series total is `0.27 K/W`, giving an estimated source-to-room rise of
 
-\[
-\Delta T=120\times0.27=32.4\ \mathrm{K}.
-\]
+`ΔT = 120 × 0.27 = 32.4 K`
 
-At a room-air temperature of \(25\ ^\circ\mathrm{C}\), the estimated source temperature is \(57.4\ ^\circ\mathrm{C}\). The concept meets the earlier 60 °C limit by only 2.6 K. That small margin is a warning, not a validation: uncertainty in the air-side coefficient or interface resistance could reverse the conclusion.
+At a room-air temperature of `25 °C`, the estimated source temperature is `57.4 °C`. The concept meets the earlier 60 °C limit by only 2.6 K. That small margin is a warning, not a validation: uncertainty in the air-side coefficient or interface resistance could reverse the conclusion.
 
 ## Sensible versus latent cooling
 
 Sensible cooling changes temperature without a phase change. For a fluid stream,
 
-\[
-\dot Q=\dot m c_p(T_{out}-T_{in}).
-\]
+`Q̇ = ṁ c_p (T_out − T_in)`
 
 Latent cooling uses a phase change. It can transport substantial energy with a small temperature difference, but it introduces pressure, inventory, control, orientation, safety, and dryout or flooding constraints depending on the system.
 
 ## Common failure mode
 
-**Adding areas or heat-transfer coefficients without defining the surface.** The area in \(hA\) must match the surface over which the coefficient was obtained. Fins, wetted channels, and projected frontal area are not interchangeable.
+**Adding areas or heat-transfer coefficients without defining the surface.** The area in `h A` must match the surface over which the coefficient was obtained. Fins, wetted channels, and projected frontal area are not interchangeable.
 
 ## Check for understanding
 

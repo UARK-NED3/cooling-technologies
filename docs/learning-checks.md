@@ -8,7 +8,7 @@ A 2 kW, 10-minute battery heat pulse is not enough to select a cooling method. R
 
 ## Module 2
 
-Halving the spreader resistance changes the series total from \(0.27\) to \(0.25\ \mathrm{K/W}\), so the temperature rise becomes \(30\ \mathrm{K}\). Halving the air-side resistance changes the total to \(0.18\ \mathrm{K/W}\), so the rise becomes \(21.6\ \mathrm{K}\). Reducing the larger air-side resistance therefore has the greater effect in this stated model. The conclusion can change if the components are not truly in series or the coefficients vary substantially with temperature or flow.
+Halving the spreader resistance changes the series total from `0.27` to `0.25 K/W`, so the temperature rise becomes `30 K`. Halving the air-side resistance changes the total to `0.18 K/W`, so the rise becomes `21.6 K`. Reducing the larger air-side resistance therefore has the greater effect in this stated model. The conclusion can change if the components are not truly in series or the coefficients vary substantially with temperature or flow.
 
 ## Module 3
 
