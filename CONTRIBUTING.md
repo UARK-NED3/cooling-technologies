@@ -14,7 +14,11 @@ Thank you for helping improve this open course.
 2. Identify the source for reported properties, correlations, or performance data.
 3. Keep illustrative examples distinct from measured or validated results.
 4. Do not include student records, restricted research material, proprietary data, or vendor material that cannot be redistributed.
-5. Check all Markdown links and render equations in GitHub's preview.
+5. Run `node scripts/check-docs.mjs`, check all Markdown links, and render equations in GitHub's preview.
+
+## Reuse and contribution terms
+
+By contributing repository-authored material, you confirm that you have the right to share it publicly and agree to release that contribution under the repository's [CC BY 4.0 license](LICENSE). Do not contribute third-party material unless its redistribution and attribution terms are documented in the pull request.
 
 ## Style
 
