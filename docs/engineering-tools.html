@@ -33,7 +33,7 @@ All inputs use SI units. Record the system boundary, source, units, and evidence
   <form class="tool-card" data-calculator="rise">
     <h2>Resistance-network temperature rise</h2>
     <p><code>ΔT = Q̇ R<sub>th</sub></code></p>
-    <label>Heat load (W)<input name="heat-load" type="number" value="120" step="any" required></label>
+    <label>Heat load (W)<input name="heat-load" type="number" value="120" min="0.000001" step="any" required></label>
     <label>Total thermal resistance (K/W)<input name="thermal-resistance" type="number" value="0.27" min="0.000001" step="any" required></label>
     <button type="submit">Calculate</button>
     <output class="tool-result" data-result aria-live="polite"></output>

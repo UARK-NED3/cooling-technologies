@@ -18,6 +18,7 @@ const requiredFiles = [
   'docs/self-paced-study-manual.md',
   'docs/engineering-start-here.md',
   'docs/engineering-tools.html',
+  'docs/assets/screening-calculators.mjs',
   'docs/validation-ladder.md',
   'docs/case-studies/cold-plate-cfd-screening.md',
   'docs/templates/cooling-problem-definition.md',

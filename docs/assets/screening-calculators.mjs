@@ -10,6 +10,12 @@ function positiveNumber(value, name) {
   return number;
 }
 
+function nonnegativeNumber(value, name) {
+  const number = finiteNumber(value, name);
+  if (number < 0) throw new Error(`${name} must be zero or positive.`);
+  return number;
+}
+
 export function calculateMaximumThermalResistance(limitTemperatureC, sinkTemperatureC, heatLoadW) {
   const limit = finiteNumber(limitTemperatureC, 'Temperature limit');
   const sink = finiteNumber(sinkTemperatureC, 'Sink temperature');
@@ -18,7 +24,7 @@ export function calculateMaximumThermalResistance(limitTemperatureC, sinkTempera
 }
 
 export function calculateTemperatureRise(heatLoadW, thermalResistanceKW) {
-  const heatLoad = finiteNumber(heatLoadW, 'Heat load');
+  const heatLoad = positiveNumber(heatLoadW, 'Heat load');
   const thermalResistance = positiveNumber(thermalResistanceKW, 'Thermal resistance');
   return heatLoad * thermalResistance;
 }
@@ -39,8 +45,8 @@ export function calculateStorageMass(energyJ, specificHeatJPerKgK, permittedRise
 
 export function calculateCOP(coolingDutyKW, compressorInputKW, auxiliaryInputKW = 0) {
   const coolingDuty = positiveNumber(coolingDutyKW, 'Cooling duty');
-  const compressorInput = finiteNumber(compressorInputKW, 'Compressor input');
-  const auxiliaryInput = finiteNumber(auxiliaryInputKW, 'Auxiliary input');
+  const compressorInput = nonnegativeNumber(compressorInputKW, 'Compressor input');
+  const auxiliaryInput = nonnegativeNumber(auxiliaryInputKW, 'Auxiliary input');
   const totalInput = compressorInput + auxiliaryInput;
   if (totalInput <= 0) throw new Error('Total electrical input must be positive.');
   return coolingDuty / totalInput;

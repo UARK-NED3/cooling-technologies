@@ -33,3 +33,9 @@ test('rejects zero or negative denominators in screening calculations', () => {
   assert.throws(() => calculateLiquidMassFlow(5000, 4000, 0), /positive/);
   assert.throws(() => calculateCOP(10, 0, 0), /positive/);
 });
+
+test('rejects negative heat and electrical-input values', () => {
+  assert.throws(() => calculateTemperatureRise(-1, 0.27), /positive/);
+  assert.throws(() => calculateCOP(10, -1, 2), /positive/);
+  assert.throws(() => calculateCOP(10, 2, -1), /positive/);
+});
