@@ -43,4 +43,3 @@ The expected self-study time is approximately 8–12 hours, excluding optional r
 This course contains screening-level, illustrative material. Refrigerants, pressurized loops, electrical systems, rotating equipment, and biological growth in water systems have safety, environmental, and regulatory implications. Do not construct or modify equipment from these lessons without qualified supervision and the applicable codes, standards, procedures, and manufacturer instructions.
 
 Continue to the [course map](course-map.md) or begin with [Module 1](modules/01-why-cooling-matters.md).
-

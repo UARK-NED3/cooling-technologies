@@ -19,4 +19,3 @@ Thank you for helping improve this open course.
 ## Style
 
 Use SI units by default. Define symbols on first use, write connected explanatory paragraphs, and state a calculation's boundary conditions and validity limits. Prefer a small, verifiable improvement over a broad untested rewrite.
-

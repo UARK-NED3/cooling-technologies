@@ -38,4 +38,3 @@ Plan 60–100 minutes per module. A learner who wants a compact overview can com
 ## Optional capstone
 
 Choose a real but non-confidential system: a small electronics enclosure, a laboratory instrument, a refrigerated cabinet, a battery pack, or a room-level heat source. Prepare the Module 6 concept memo. Clearly separate measured inputs from assumptions, and do not present the result as a validated design.
-

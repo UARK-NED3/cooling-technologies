@@ -64,4 +64,3 @@ A battery module produces 2 kW for 10 minutes and 200 W otherwise. Name three in
 Write a five-line problem statement for one system you know. Label every numerical input as measured, reported, assumed, or unknown. Do not select equipment yet.
 
 Next: [Module 2 — Heat, temperature, and thermal resistance](02-thermal-fundamentals.md).
-

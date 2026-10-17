@@ -74,4 +74,3 @@ Which is more effective at reducing the 32.4 K estimated rise: halving the 0.04 
 Draw a source-to-sink thermal-resistance network for a laptop, a building room, or a refrigerated cabinet. Mark which resistance you would measure or model first.
 
 Next: [Module 3 — Cooling mechanisms](03-cooling-mechanisms.md).
-

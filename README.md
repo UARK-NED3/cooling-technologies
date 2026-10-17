@@ -22,6 +22,7 @@ The course explains first-principles, screening-level reasoning about cooling sy
 6. [A screening-level cooling decision](docs/modules/06-screening-decision.md)
 
 See the [course map](docs/course-map.md), [glossary](docs/glossary.md), and [learning checks](docs/learning-checks.md).
+For primary references, property tools, and evidence practices, see [References and tools](docs/references-and-tools.md).
 
 ## Boundaries and attribution
 
@@ -32,4 +33,3 @@ The repository currently has no reuse license. Add a license only after the inte
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Suggestions that improve physical accuracy, accessibility, or reproducibility are welcome.
-

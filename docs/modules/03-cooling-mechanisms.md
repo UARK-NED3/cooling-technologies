@@ -57,4 +57,3 @@ Name one condition that would rule out (a) passive air cooling, (b) direct evapo
 For your Module 1 system, create a three-column table: plausible mechanisms, required conditions, and the first uncertainty to resolve.
 
 Next: [Module 4 — Cooling-system architectures](04-system-architectures.md).
-
