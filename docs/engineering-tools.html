@@ -1,0 +1,82 @@
+---
+layout: default
+title: Engineering screening tools
+---
+
+<style>
+  .tool-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+  .tool-card { border: 1px solid #d8d8d8; border-radius: .5rem; padding: 1rem; }
+  .tool-card label { display: block; font-weight: 600; margin-top: .65rem; }
+  .tool-card input { box-sizing: border-box; width: 100%; padding: .45rem; }
+  .tool-card button { margin-top: 1rem; }
+  .tool-result { background: #f3f8f5; border-left: .3rem solid #159957; margin-top: 1rem; padding: .75rem; }
+  .tool-result[data-status="error"] { background: #fff4f4; border-left-color: #b00020; }
+</style>
+
+# Engineering screening tools
+
+These browser-based tools support transparent first-pass calculations. They do not transmit or save your inputs. Every result is **derived, screening-level evidence**: use actual fluid properties, geometry, operating state, pressure drop, controls, safety requirements, and validation before design or procurement.
+
+All inputs use SI units. Record the system boundary, source, units, and evidence status of each input in the [assumption and evidence register](templates/assumption-evidence-register.md).
+
+<div class="tool-grid">
+  <form class="tool-card" data-calculator="resistance">
+    <h2>Allowable thermal resistance</h2>
+    <p><code>R<sub>th,max</sub> = (T<sub>limit</sub> − T<sub>sink</sub>) / Q̇</code></p>
+    <label>Temperature limit (°C)<input name="limit-temperature" type="number" value="60" step="any" required></label>
+    <label>Sink temperature (°C)<input name="sink-temperature" type="number" value="25" step="any" required></label>
+    <label>Heat load (W)<input name="heat-load" type="number" value="120" min="0.000001" step="any" required></label>
+    <button type="submit">Calculate</button>
+    <output class="tool-result" data-result aria-live="polite"></output>
+  </form>
+
+  <form class="tool-card" data-calculator="rise">
+    <h2>Resistance-network temperature rise</h2>
+    <p><code>ΔT = Q̇ R<sub>th</sub></code></p>
+    <label>Heat load (W)<input name="heat-load" type="number" value="120" step="any" required></label>
+    <label>Total thermal resistance (K/W)<input name="thermal-resistance" type="number" value="0.27" min="0.000001" step="any" required></label>
+    <button type="submit">Calculate</button>
+    <output class="tool-result" data-result aria-live="polite"></output>
+  </form>
+
+  <form class="tool-card" data-calculator="flow">
+    <h2>Single-phase liquid-flow target</h2>
+    <p><code>ṁ = Q̇ / (c<sub>p</sub> ΔT<sub>fluid</sub>)</code></p>
+    <label>Heat load (W)<input name="heat-load" type="number" value="5000" min="0.000001" step="any" required></label>
+    <label>Specific heat (J/(kg·K))<input name="specific-heat" type="number" value="4000" min="0.000001" step="any" required></label>
+    <label>Permitted mean fluid rise (K)<input name="permitted-rise" type="number" value="5" min="0.000001" step="any" required></label>
+    <button type="submit">Calculate</button>
+    <output class="tool-result" data-result aria-live="polite"></output>
+  </form>
+
+  <form class="tool-card" data-calculator="storage">
+    <h2>Sensible thermal-storage mass</h2>
+    <p><code>m = E / (c<sub>p</sub> ΔT)</code></p>
+    <label>Stored energy (J)<input name="energy" type="number" value="1200000" min="0.000001" step="any" required></label>
+    <label>Specific heat (J/(kg·K))<input name="specific-heat" type="number" value="4000" min="0.000001" step="any" required></label>
+    <label>Permitted storage rise (K)<input name="permitted-rise" type="number" value="10" min="0.000001" step="any" required></label>
+    <button type="submit">Calculate</button>
+    <output class="tool-result" data-result aria-live="polite"></output>
+  </form>
+
+  <form class="tool-card" data-calculator="cop">
+    <h2>Declared-boundary COP</h2>
+    <p><code>COP<sub>R</sub> = Q̇<sub>cooling</sub> / Ẇ<sub>input</sub></code></p>
+    <label>Cooling duty (kW)<input name="cooling-duty" type="number" value="10" min="0.000001" step="any" required></label>
+    <label>Compressor input (kW)<input name="compressor-input" type="number" value="2.5" step="any" required></label>
+    <label>Auxiliary input: fans, pumps, controls (kW)<input name="auxiliary-input" type="number" value="0.5" step="any" required></label>
+    <button type="submit">Calculate</button>
+    <output class="tool-result" data-result aria-live="polite"></output>
+  </form>
+</div>
+
+## Interpretation and limits
+
+- A thermal-resistance result represents the stated source-to-sink path; it does not establish a junction, interface, local-fluid, or component-case temperature unless those locations and resistances are explicitly in the model.
+- The liquid-flow calculation gives an average energy-balance target. It does not determine pump head, local convection, branch distribution, pressure drop, cavitation margin, material compatibility, or component temperature.
+- The storage calculation assumes all stored energy reaches a uniform thermal mass over the stated temperature change. It ignores rate limits, packaging, heat loss, and recharge.
+- The COP calculation is comparable only when cooling duty, electrical input, source/sink state, part-load condition, and time basis match.
+
+Use the [validation ladder](validation-ladder.md) to choose the next evidence step, or return to [Start by engineering problem](engineering-start-here.md).
+
+<script type="module" src="assets/screening-calculators.mjs"></script>
