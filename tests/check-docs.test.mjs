@@ -18,4 +18,5 @@ test('professional-education governance files remain release requirements', (t) 
 
   assert.ok(errors.includes('Missing required file: docs/accessibility.md'));
   assert.ok(errors.includes('Missing required file: docs/maintenance-and-governance.md'));
+  assert.ok(errors.includes('Missing required file: docs/ned3-applied-examples.md'));
 });

@@ -14,6 +14,7 @@ const requiredFiles = [
   'docs/references-and-tools.md',
   'docs/accessibility.md',
   'docs/maintenance-and-governance.md',
+  'docs/ned3-applied-examples.md',
   'docs/professional-workshop.md',
   'docs/assessment.md',
   'docs/facilitator-guide.md',
