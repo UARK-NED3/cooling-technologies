@@ -31,6 +31,8 @@ The expected self-study time is approximately 8–12 hours, excluding optional r
 
 For an instructor-led, electronics-focused four-hour pathway, use the [Professional workshop track](professional-workshop.md), its [assessment and cases](assessment.md), and the [facilitator guide](facilitator-guide.md). This is independent open educational material; it does not itself provide CEUs, PDHs, academic credit, or certification.
 
+Use the [NED3 applied examples](ned3-applied-examples.md) for public CFD, synthetic data-center, and experimental-protocol activities that show how evidence class constrains an engineering conclusion.
+
 ## Reuse and maintenance
 
 Repository-authored content is available under [CC BY 4.0](../LICENSE). Before reusing, extending, or delivering the material, read the [accessibility guidance](accessibility.md), [evidence map](evidence-map.md), and [maintenance and governance policy](maintenance-and-governance.md).

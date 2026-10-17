@@ -46,6 +46,13 @@ Accept equivalent terminology if the participant preserves the distinction betwe
 - Component-limit risks can include local interface resistance, nonuniform heat flux, maldistribution, entrained gas, a local flow restriction, inaccurate sensor placement, transient load, or a rise in coolant inlet temperature.
 - A bounded recommendation states the calculation and limitation, for example: “Use 0.286 kg/s as a water-loop screening target at the stated 8 kW and 7 K assumptions; complete hydraulic and local thermal analyses before selecting a pump or claiming component-temperature compliance.”
 
+### Case C
+
+- Valid inputs include either chip heat flux, either inlet mass-flow rate, or either inlet total temperature. Valid outputs include a stated temperature field, chip mean or maximum temperature, outlet temperature, or pressure-drop field.
+- Supported conclusions are restricted to the stated dual-chip pin-fin geometry, steady incompressible CFD model, and sampled boundary-condition envelope. Unsupported claims include experimental validation, a different geometry, transient response, external pump selection, or facility performance.
+- A pump-head calculation requires pressure units and a full hydraulic boundary. The dataset documentation identifies the released pressure-drop unit as unrecoverable from the deposit; the values must therefore remain relative until the original case setup is consulted.
+- Any two: geometry-specific POD basis, interpolative sampled envelope, central yz mid-plane prediction, steady-state-only data, or excluded package/pump/facility physics.
+
 ## Completion evidence
 
 For a host-managed completion record, retain only the minimum necessary evidence: date, version of course material, attendee identity if required by the host, attendance basis, and aggregate or individual assessment result under the host policy. This public repository does not collect attendance data or issue a completion record.

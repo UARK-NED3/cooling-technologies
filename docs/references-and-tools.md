@@ -15,6 +15,8 @@ These resources support further study and detailed analysis. They do not replace
 
 The [evidence map](evidence-map.md) identifies which relations in this course are derived teaching models, which values are illustrative, and what source class is needed before a result is used in a design decision. For electronics-focused work, consult the current applicable component, package, test-method, reliability, electrical-safety, and environmental requirements. This course does not reproduce or substitute for proprietary standards.
 
+The [NED3 applied examples](ned3-applied-examples.md) provide source-bounded activities based on NED3 public datasets and software, alongside an instructor-only local inventory case. They are organized by evidence class rather than by laboratory branding.
+
 | Course material | Primary teaching reference | Design-use source still required |
 | --- | --- | --- |
 | Module 1 energy balances | Thermodynamics text above | Actual boundary, flow states, measurements, and duty cycle |

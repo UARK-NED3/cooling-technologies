@@ -42,6 +42,10 @@ By the end of the workshop, a participant can:
 | 3:35–3:55 | Case synthesis and peer critique | Traceability table and recommendation |
 | 3:55–4:00 | Post-assessment and close | Individual post-assessment |
 
+## NED3 applied examples
+
+Use the [NED3 applied examples](ned3-applied-examples.md) to replace or extend an illustrative calculation with source-aware activities. The recommended sequence is: start with the public dual-chip cold-plate CFD case, use the Data Center Cooling Explorer for a synthetic conservation exercise, and discuss the local hybrid-cooler inventory only in an instructor-led setting. The examples deliberately distinguish simulated, measured, local-inventory, and synthetic evidence.
+
 ## PDC-style outline (16 topics)
 
 1. Define the protected temperature location and decision consequence.

@@ -36,3 +36,14 @@ Use the same six prompts before and after the workshop. The pre-assessment ident
 2. List three inputs or analyses required before selecting a pump. **(3 points)**
 3. List two reasons a component can exceed its temperature limit even if the average fluid rise equals 7 K. **(2 points)**
 4. Write a one-sentence bounded recommendation that states both the estimated flow and its limitation. **(2 points)**
+
+## Case C — Public cold-plate CFD is simulated evidence
+
+**Scenario.** The public [NED3 ColdPlate-CFD-2000sims dataset](https://huggingface.co/datasets/UARK-NED3/ColdPlate-CFD-2000sims) contains 2,000 steady-state simulations of a liquid-cooled, dual-chip pin-fin cold plate. Its inputs include two chip heat fluxes, two inlet mass-flow rates, and two inlet total temperatures. The source warns that the released pressure-drop fields do not record a pressure unit.
+
+**Evidence status.** This is public, simulated evidence under the geometry, turbulence model, and boundary-condition envelope stated in the dataset documentation. It is not an experimental qualification record.
+
+1. List two inputs and two outputs that belong to the CFD boundary/result record. **(2 points)**
+2. State one conclusion the data can support and one claim it cannot support without new evidence. **(2 points)**
+3. Explain why the pressure-drop field must not be inserted into a pump-head calculation until the original unit is recovered. **(2 points)**
+4. Name two applicability limits of the released surrogate. **(2 points)**

@@ -28,6 +28,8 @@ For primary references, property tools, and evidence practices, see [References 
 
 The repository also includes a four-hour, instructor-led [electronics thermal-design workshop](docs/professional-workshop.md), [assessment and cases](docs/assessment.md), and [facilitator guide](docs/facilitator-guide.md). The structure is designed for professional education, but it is not an ECTC, ITherm, IEEE, ASHRAE, or University of Arkansas course, and it confers no credential by itself.
 
+The [NED3 applied examples](docs/ned3-applied-examples.md) connect the workshop to public cold-plate CFD, synthetic data-center, and experimental-protocol resources while preserving source, license, and validation boundaries.
+
 ## Release and maintenance
 
 See the [changelog](CHANGELOG.md), [citation record](CITATION.cff), [accessibility guidance](docs/accessibility.md), and [maintenance policy](docs/maintenance-and-governance.md). A GitHub Actions check verifies required course files and internal Markdown links on updates to `main` and pull requests.
