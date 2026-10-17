@@ -39,3 +39,7 @@ test('rejects negative heat and electrical-input values', () => {
   assert.throws(() => calculateCOP(10, -1, 2), /positive/);
   assert.throws(() => calculateCOP(10, 2, -1), /positive/);
 });
+
+test('rejects blank calculator inputs instead of coercing them to zero', () => {
+  assert.throws(() => calculateMaximumThermalResistance('', 25, 120), /finite/);
+});

@@ -1,4 +1,7 @@
 function finiteNumber(value, name) {
+  if (typeof value === 'string' && value.trim() === '') {
+    throw new Error(`${name} must be a finite number.`);
+  }
   const number = Number(value);
   if (!Number.isFinite(number)) throw new Error(`${name} must be a finite number.`);
   return number;
