@@ -2,6 +2,10 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.5.2 — 2026-10-17
+
+- Improved the interactive tool-card layout so each calculation result is displayed on its own readable row.
+
 ## 0.5.1 — 2026-10-17
 
 - Corrected the interactive screening-tools page so its engineering guidance and links render as HTML on GitHub Pages.

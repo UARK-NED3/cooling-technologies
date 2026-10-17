@@ -14,6 +14,7 @@ test('engineering tools page uses HTML content instead of literal Markdown', () 
 
   assert.match(page, /<h1>Engineering screening tools<\/h1>/);
   assert.match(page, /<h2>Interpretation and limits<\/h2>/);
+  assert.match(page, /\.tool-result\s*\{[^}]*display:\s*block/);
   assert.doesNotMatch(page, /^# Engineering screening tools$/m);
   assert.doesNotMatch(page, /^## Interpretation and limits$/m);
 });
