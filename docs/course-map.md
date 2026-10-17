@@ -35,6 +35,8 @@ heat generation + temperature limit + environment
 
 Plan 60–100 minutes per module. A learner who wants a compact overview can complete Modules 1–3 and read the summaries of Modules 4–6; a learner developing a concept should complete all six and use the final transfer task.
 
+For an independent, output-oriented route through the same material, follow the [self-paced study manual](self-paced-study-manual.md). It sequences the modules, specifies the study record and completion evidence, and preserves the distinction between a screening concept and a validated design.
+
 ## Optional capstone
 
 Choose a real but non-confidential system: a small electronics enclosure, a laboratory instrument, a refrigerated cabinet, a battery pack, or a room-level heat source. Prepare the Module 6 concept memo. Clearly separate measured inputs from assumptions, and do not present the result as a validated design.

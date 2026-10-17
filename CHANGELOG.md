@@ -2,6 +2,11 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.4.0 — 2026-10-17
+
+- Added a self-paced study manual that organizes the six modules into an independent-study pathway with explicit outputs, worked reasoning checks, and a screening-memo completion standard.
+- Linked the manual from course navigation and distinguished it from the separate instructor-led professional workshop.
+
 ## 0.3.0 — 2026-10-17
 
 - Added NED3 applied examples that distinguish public simulated, measured/reconstructed, synthetic, and local-inventory evidence.

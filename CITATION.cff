@@ -3,7 +3,7 @@ message: "If you use this course, please cite the repository version you used."
 title: "Cooling Technologies: Principles, Systems, and Applications"
 authors:
   - name: "NED³ Laboratory"
-version: 0.3.0
+version: 0.4.0
 date-released: 2026-10-17
 repository-code: "https://github.com/UARK-NED3/cooling-technologies"
 license: CC-BY-4.0

@@ -26,7 +26,7 @@ For primary references, property tools, and evidence practices, see [References 
 
 ## Professional-education pathway
 
-The repository also includes a four-hour, instructor-led [electronics thermal-design workshop](docs/professional-workshop.md), [assessment and cases](docs/assessment.md), and [facilitator guide](docs/facilitator-guide.md). The structure is designed for professional education, but it is not an ECTC, ITherm, IEEE, ASHRAE, or University of Arkansas course, and it confers no credential by itself.
+For independent learners, the [self-paced study manual](docs/self-paced-study-manual.md) provides a 10–11-hour sequence with worked checks, evidence records, and a screening-level concept memo. The repository also includes a four-hour, instructor-led [electronics thermal-design workshop](docs/professional-workshop.md), [assessment and cases](docs/assessment.md), and [facilitator guide](docs/facilitator-guide.md). The structure is designed for professional education, but it is not an ECTC, ITherm, IEEE, ASHRAE, or University of Arkansas course, and it confers no credential by itself.
 
 The [NED3 applied examples](docs/ned3-applied-examples.md) connect the workshop to public cold-plate CFD, synthetic data-center, and experimental-protocol resources while preserving source, license, and validation boundaries.
 

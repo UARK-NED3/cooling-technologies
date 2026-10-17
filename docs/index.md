@@ -4,7 +4,7 @@
 
 Cooling is the purposeful removal, transport, or rejection of thermal energy so that a system remains within its required temperature range. It appears in buildings, refrigeration, industrial processes, electronics, batteries, vehicles, medical devices, and data centers. The technology differs across these applications, but every cooling problem begins with the same physical question: **where is heat generated, and by what path can it be moved to an acceptable sink?**
 
-This self-paced module develops a mechanism-first answer to that question. It treats cooling as an energy and heat-transfer problem before introducing equipment categories.
+This self-paced module develops a mechanism-first answer to that question. It treats cooling as an energy and heat-transfer problem before introducing equipment categories. Use the [self-paced study manual](self-paced-study-manual.md) for a guided independent-study sequence with calculations, readiness checks, and a final screening memo.
 
 ## Audience and prerequisites
 
@@ -25,7 +25,7 @@ After completing the course, you should be able to:
 
 Work through one module at a time. Before reading a worked example, estimate the answer and its units. Record each stated assumption; changing an assumption can change the appropriate technology. Complete the learning check at the end of each module, then compare your reasoning with the guide in [Learning checks](learning-checks.md).
 
-The expected self-study time is approximately 8–12 hours, excluding optional reading and any hands-on project.
+The expected self-study time is approximately 8–12 hours, excluding optional reading and any hands-on project. The study manual organizes this material into a roughly 10–11-hour pathway; it is not a credentialed or instructor-graded program.
 
 ## Professional workshop option
 
