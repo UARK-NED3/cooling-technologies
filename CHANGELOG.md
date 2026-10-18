@@ -2,6 +2,10 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.7.1 — 2026-10-17
+
+- Corrected two Module 7 inline expressions that GitHub Pages rendered as raw TeX text.
+
 ## 0.7.0 — 2026-10-17
 
 - Added an application-neutral lumped-parameter modeling module and a local first-order thermal-RC simulator that makes its boundary, inputs, exact solution, and validity limits explicit.

@@ -38,4 +38,6 @@ test('multiline lumped-parameter relations use TeX alignment rather than Markdow
 
   assert.match(moduleSeven, /\\begin\{aligned\}/);
   assert.doesNotMatch(moduleSeven, /^- \\frac\{T-T_\{\\mathrm\{sink\}\}\}/m);
+  assert.doesNotMatch(moduleSeven, /The steady-state rise remains \$\\dot\{Q\}/);
+  assert.doesNotMatch(moduleSeven, /as \$\\dot\{Q\}/);
 });

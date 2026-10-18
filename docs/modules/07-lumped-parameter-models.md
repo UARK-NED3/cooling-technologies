@@ -45,7 +45,7 @@ T(t)&=T_{\mathrm{sink}}+\dot{Q}_{\mathrm{load}}R_{\mathrm{th}} \\
 \end{aligned}
 $$
 
-The steady-state rise remains $\dot{Q}_{\mathrm{load}}R_{\mathrm{th}}$. Thermal capacitance does not remove that steady rise; it delays the approach to it. At $t=\tau$, a step response has completed about 63% of its total change. This is a property of this model, not a universal equipment rule.
+The steady-state rise is the product of the stated heat-load rate and declared thermal resistance. Thermal capacitance does not remove that steady rise; it delays the approach to it. At one time constant, a step response has completed about 63% of its total change. This is a property of this model, not a universal equipment rule.
 
 ## Worked screening example
 
@@ -85,7 +85,7 @@ An RC model can be calibrated from a measured transient, but fitted parameters a
 
 Useful limiting-case checks are:
 
-- as $\dot{Q}_{\mathrm{load}}\rightarrow0$, the node tends toward $T_{\mathrm{sink}}$;
+- as the heat-load rate tends to zero, the node tends toward the stated sink temperature;
 - decreasing $R_{\mathrm{th}}$ lowers the constant-load temperature rise and shortens $\tau$ when $C_{\mathrm{th}}$ is fixed;
 - increasing $C_{\mathrm{th}}$ slows the response but leaves the constant-load temperature rise unchanged; and
 - when a simulated temperature violates a limit, verify the load history and sink history before treating the result as a hardware conclusion.
