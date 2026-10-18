@@ -1,0 +1,172 @@
+---
+layout: default
+title: Lumped-parameter thermal simulator
+---
+
+<style>
+  .model-layout { display: grid; gap: 1rem; grid-template-columns: minmax(16rem, 23rem) minmax(0, 1fr); }
+  .model-card { border: 1px solid #d8d8d8; border-radius: .5rem; padding: 1rem; }
+  .model-card label { display: block; font-weight: 600; margin-top: .65rem; }
+  .model-card input { box-sizing: border-box; width: 100%; padding: .45rem; }
+  .model-card button { margin-top: 1rem; }
+  .model-result { background: #f3f8f5; border-left: .3rem solid #159957; display: block; margin-top: 1rem; padding: .75rem; }
+  .model-result[data-status="error"] { background: #fff4f4; border-left-color: #b00020; }
+  .model-chart { width: 100%; height: auto; min-height: 18rem; }
+  .model-chart text { fill: #333; font: 14px system-ui, sans-serif; }
+  .model-chart .axis { stroke: #555; stroke-width: 1; }
+  .model-chart .grid { stroke: #d8d8d8; stroke-width: 1; }
+  .model-chart .temperature { fill: none; stroke: #b00020; stroke-width: 3; }
+  .model-chart .sink { fill: none; stroke: #555; stroke-dasharray: 5 4; stroke-width: 2; }
+  .model-chart .step { stroke: #005f73; stroke-dasharray: 4 4; stroke-width: 2; }
+  @media (max-width: 44rem) { .model-layout { grid-template-columns: 1fr; } }
+</style>
+
+<h1>Lumped-parameter thermal simulator</h1>
+
+<p>This local tool evaluates the one-node model in <a href="modules/07-lumped-parameter-models.html">Module 7</a>. Your inputs stay in your browser; the page does not transmit or save them. The temperature trace is a <strong>derived, screening-level result</strong> of the stated constant resistance, constant capacitance, and constant sink-temperature assumptions—not a validated hardware prediction.</p>
+
+<div class="model-layout">
+  <form class="model-card" id="thermal-rc-form">
+    <h2>Model inputs</h2>
+    <p>All inputs use SI units. A step load replaces the baseline load at the step time.</p>
+    <label>Sink temperature (°C)<input name="sink-temperature" type="number" value="25" step="any" required></label>
+    <label>Initial node temperature (°C)<input name="initial-temperature" type="number" value="25" step="any" required></label>
+    <label>Equivalent thermal resistance (K/W)<input name="thermal-resistance" type="number" value="0.25" min="0.000001" step="any" required></label>
+    <label>Thermal capacitance (J/K)<input name="thermal-capacitance" type="number" value="2000" min="0.000001" step="any" required></label>
+    <label>Baseline heat load (W)<input name="baseline-load" type="number" value="0" min="0" step="any" required></label>
+    <label>Step heat load (W)<input name="step-load" type="number" value="100" min="0" step="any" required></label>
+    <label>Step time (s)<input name="step-time" type="number" value="0" min="0" step="any" required></label>
+    <label>Simulation duration (s)<input name="duration" type="number" value="1500" min="0.000001" step="any" required></label>
+    <label>Plot sample interval (s)<input name="time-step" type="number" value="15" min="0.000001" step="any" required></label>
+    <button type="submit">Simulate</button>
+    <output class="model-result" id="model-result" aria-live="polite"></output>
+  </form>
+
+  <section class="model-card" aria-labelledby="model-result-heading">
+    <h2 id="model-result-heading">Temperature response</h2>
+    <div class="equation">$$C_{\mathrm{th}}\frac{\mathrm{d}T}{\mathrm{d}t}=\dot{Q}_{\mathrm{load}}-\frac{T-T_{\mathrm{sink}}}{R_{\mathrm{th}}},\qquad \tau=R_{\mathrm{th}}C_{\mathrm{th}}$$</div>
+    <svg class="model-chart" id="thermal-rc-chart" viewBox="0 0 760 360" role="img" aria-labelledby="chart-title chart-description">
+      <title id="chart-title">Simulated node temperature versus time</title>
+      <desc id="chart-description">A chart will show the selected one-node thermal model response after simulation.</desc>
+    </svg>
+    <p><span aria-hidden="true" style="color:#b00020">━━</span> node temperature &nbsp; <span aria-hidden="true" style="color:#555">┄┄</span> sink temperature &nbsp; <span aria-hidden="true" style="color:#005f73">┄┄</span> load step</p>
+  </section>
+</div>
+
+<h2>Interpretation and limits</h2>
+
+<ul>
+  <li>The model solves each constant-load interval exactly; the plot sample interval affects resolution, not the mathematical solution within the stated one-node model.</li>
+  <li>Use a separate node or a spatial model if an interface, heat spreader, fluid, or protected component has a materially different temperature.</li>
+  <li>Do not treat the equivalent resistance as constant if airflow, flow rate, phase, contact condition, or sink temperature changes materially over the event.</li>
+  <li>Record the input source, system boundary, temperature location, time basis, and evidence status in the <a href="templates/assumption-evidence-register.html">assumption and evidence register</a>.</li>
+</ul>
+
+<p>For equations, a worked example, a validity discussion, and a fidelity ladder, read <a href="modules/07-lumped-parameter-models.html">Module 7</a>. For a technology-family comparison, use the <a href="technology-atlas.html">technology atlas</a>.</p>
+
+<script type="module">
+  import { simulateThermalRc, thermalTimeConstant } from './assets/lumped-parameter.mjs';
+
+  const form = document.querySelector('#thermal-rc-form');
+  const output = document.querySelector('#model-result');
+  const chart = document.querySelector('#thermal-rc-chart');
+  const svgNamespace = 'http://www.w3.org/2000/svg';
+
+  function inputValue(name) {
+    return form.elements.namedItem(name).value;
+  }
+
+  function number(value, name) {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed)) throw new Error(`${name} must be a finite number.`);
+    return parsed;
+  }
+
+  function format(value, digits = 2) {
+    return Number(value).toLocaleString(undefined, { maximumFractionDigits: digits });
+  }
+
+  function svgElement(name, attributes = {}, text = '') {
+    const element = document.createElementNS(svgNamespace, name);
+    Object.entries(attributes).forEach(([attribute, value]) => element.setAttribute(attribute, value));
+    if (text) element.textContent = text;
+    return element;
+  }
+
+  function pointString(samples, scaleX, scaleY) {
+    return samples.map((sample) => `${scaleX(sample.timeS)},${scaleY(sample.temperatureC)}`).join(' ');
+  }
+
+  function renderChart(samples, sinkTemperatureC, stepTimeS) {
+    const width = 760;
+    const height = 360;
+    const margin = { left: 65, right: 30, top: 25, bottom: 55 };
+    const temperatures = samples.map((sample) => sample.temperatureC).concat(sinkTemperatureC);
+    const minimumTemperature = Math.min(...temperatures);
+    const maximumTemperature = Math.max(...temperatures);
+    const padding = Math.max(1, (maximumTemperature - minimumTemperature) * 0.12);
+    const lowerTemperature = minimumTemperature - padding;
+    const upperTemperature = maximumTemperature + padding;
+    const durationS = samples.at(-1).timeS;
+    const scaleX = (value) => margin.left + value / durationS * (width - margin.left - margin.right);
+    const scaleY = (value) => height - margin.bottom - (value - lowerTemperature) / (upperTemperature - lowerTemperature) * (height - margin.top - margin.bottom);
+
+    chart.replaceChildren(
+      svgElement('title', { id: 'chart-title' }, 'Simulated node temperature versus time'),
+      svgElement('desc', { id: 'chart-description' }, `Node temperature changes from ${format(samples[0].temperatureC)} to ${format(samples.at(-1).temperatureC)} degrees Celsius over ${format(durationS)} seconds.`),
+    );
+
+    for (let fraction = 0; fraction <= 1; fraction += 0.25) {
+      const y = margin.top + fraction * (height - margin.top - margin.bottom);
+      const value = upperTemperature - fraction * (upperTemperature - lowerTemperature);
+      chart.append(
+        svgElement('line', { class: 'grid', x1: margin.left, x2: width - margin.right, y1: y, y2: y }),
+        svgElement('text', { x: margin.left - 8, y: y + 5, 'text-anchor': 'end' }, `${format(value)} °C`),
+      );
+    }
+
+    chart.append(
+      svgElement('line', { class: 'axis', x1: margin.left, x2: width - margin.right, y1: height - margin.bottom, y2: height - margin.bottom }),
+      svgElement('line', { class: 'axis', x1: margin.left, x2: margin.left, y1: margin.top, y2: height - margin.bottom }),
+      svgElement('text', { x: width / 2, y: height - 15, 'text-anchor': 'middle' }, 'Time (s)'),
+      svgElement('text', { x: 18, y: height / 2, transform: `rotate(-90 18 ${height / 2})`, 'text-anchor': 'middle' }, 'Temperature (°C)'),
+      svgElement('text', { x: margin.left, y: height - margin.bottom + 25 }, '0'),
+      svgElement('text', { x: width - margin.right, y: height - margin.bottom + 25, 'text-anchor': 'end' }, `${format(durationS)}`),
+      svgElement('line', { class: 'sink', x1: margin.left, x2: width - margin.right, y1: scaleY(sinkTemperatureC), y2: scaleY(sinkTemperatureC) }),
+      svgElement('line', { class: 'step', x1: scaleX(stepTimeS), x2: scaleX(stepTimeS), y1: margin.top, y2: height - margin.bottom }),
+      svgElement('polyline', { class: 'temperature', points: pointString(samples, scaleX, scaleY) }),
+    );
+  }
+
+  function simulate() {
+    const input = {
+      sinkTemperatureC: inputValue('sink-temperature'),
+      initialTemperatureC: inputValue('initial-temperature'),
+      thermalResistanceKW: inputValue('thermal-resistance'),
+      thermalCapacitanceJK: inputValue('thermal-capacitance'),
+      baselineHeatLoadW: inputValue('baseline-load'),
+      stepHeatLoadW: inputValue('step-load'),
+      stepTimeS: inputValue('step-time'),
+      durationS: inputValue('duration'),
+      timeStepS: inputValue('time-step'),
+    };
+    const samples = simulateThermalRc(input);
+    const timeConstantS = thermalTimeConstant(input.thermalResistanceKW, input.thermalCapacitanceJK);
+    const finalSample = samples.at(-1);
+    renderChart(samples, number(input.sinkTemperatureC, 'Sink temperature'), number(input.stepTimeS, 'Step time'));
+    output.dataset.status = 'result';
+    output.textContent = `Time constant: ${format(timeConstantS)} s. Simulated node temperature at ${format(finalSample.timeS)} s: ${format(finalSample.temperatureC)} °C. Current heat load: ${format(finalSample.heatLoadW)} W.`;
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    try {
+      simulate();
+    } catch (error) {
+      output.dataset.status = 'error';
+      output.textContent = error.message;
+    }
+  });
+
+  form.requestSubmit();
+</script>

@@ -20,6 +20,10 @@ const requiredFiles = [
   'docs/engineering-start-here.md',
   'docs/engineering-tools.html',
   'docs/assets/screening-calculators.mjs',
+  'docs/lumped-parameter-model.html',
+  'docs/assets/lumped-parameter.mjs',
+  'docs/technology-atlas.md',
+  'docs/state-of-practice.md',
   'docs/validation-ladder.md',
   'docs/case-studies/cold-plate-cfd-screening.md',
   'docs/templates/cooling-problem-definition.md',
@@ -36,6 +40,7 @@ const requiredFiles = [
   'docs/modules/04-system-architectures.md',
   'docs/modules/05-performance-energy-sustainability.md',
   'docs/modules/06-screening-decision.md',
+  'docs/modules/07-lumped-parameter-models.md',
 ];
 
 function markdownFiles(directory) {

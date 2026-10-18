@@ -58,6 +58,6 @@ Write a concept memo for your chosen application. Highlight one input that could
 
 ## Where to go next
 
-The appropriate next step depends on the consequence of failure. For a low-risk educational project, a documented calculation and simple measurement may be sufficient. For equipment or facility decisions, build a traceable validation plan using current property data, manufacturer information, applicable standards, and qualified review.
+The appropriate next step depends on the consequence of failure. For a low-risk educational project, a documented calculation and simple measurement may be sufficient. For equipment or facility decisions, build a traceable validation plan using current property data, manufacturer information, applicable standards, and qualified review. When load or sink conditions change in time, extend the steady screen with [Module 7 — Lumped-parameter models and simulation](07-lumped-parameter-models.md) before choosing the next fidelity level.
 
 Return to the [course home](../index.md).

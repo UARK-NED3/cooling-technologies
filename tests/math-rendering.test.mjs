@@ -32,3 +32,10 @@ test('multiline control-volume balances use a TeX alignment rather than Markdown
   assert.doesNotMatch(moduleOne, /^\+ \\sum_/m);
   assert.doesNotMatch(moduleOne, /^- \\sum_/m);
 });
+
+test('multiline lumped-parameter relations use TeX alignment rather than Markdown list syntax', () => {
+  const moduleSeven = fs.readFileSync(path.join(repoRoot, 'docs/modules/07-lumped-parameter-models.md'), 'utf8');
+
+  assert.match(moduleSeven, /\\begin\{aligned\}/);
+  assert.doesNotMatch(moduleSeven, /^- \\frac\{T-T_\{\\mathrm\{sink\}\}\}/m);
+});

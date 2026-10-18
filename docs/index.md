@@ -21,7 +21,8 @@ After completing the course, you should be able to:
 - compare passive, air-based, liquid-based, refrigeration, evaporative, and thermal-storage approaches within their operating limits;
 - calculate screening-level heat loads, thermal resistances, and coefficient-of-performance metrics with units;
 - identify why a cooling approach can fail when contact resistance, flow distribution, humidity, fouling, parasitic heat gain, or controls are neglected; and
-- develop a transparent first-pass cooling concept while stating the evidence and information still required for design.
+- develop a transparent first-pass cooling concept while stating the evidence and information still required for design; and
+- build and interpret a one-node transient thermal model within its stated validity limits.
 
 ## How to use the course
 
@@ -29,7 +30,7 @@ Work through one module at a time. Before reading a worked example, estimate the
 
 Use the [nomenclature and notation](nomenclature.md) whenever you write or check an equation. It defines the course-wide symbols, subscripts, units, and energy-balance sign convention.
 
-The expected self-study time is approximately 8–12 hours, excluding optional reading and any hands-on project. The study manual organizes this material into a roughly 10–11-hour pathway; it is not a credentialed or instructor-graded program.
+The expected self-study time is approximately 10–13 hours, excluding optional reading and any hands-on project. The study manual organizes this material into a roughly 12–13-hour pathway; it is not a credentialed or instructor-graded program.
 
 ## Professional workshop option
 
@@ -51,11 +52,14 @@ Repository-authored content is available under [CC BY 4.0](../LICENSE). Before r
 | [4. System architectures](modules/04-system-architectures.md) | How are components connected into a system? | An architecture sketch |
 | [5. Performance and energy](modules/05-performance-energy-sustainability.md) | What does useful cooling cost in energy and resources? | A metric set |
 | [6. Screening-level decision](modules/06-screening-decision.md) | Which concept should move to detailed study? | A traceable concept memo |
+| [7. Lumped-parameter models and simulation](modules/07-lumped-parameter-models.md) | How does a protected temperature respond to a transient load? | A bounded 0D model and validity check |
 
 ## Engineering workspace
 
 - [Start by engineering problem](engineering-start-here.md): application-based entry routes for component, loop, immersion, facility, refrigeration, and evidence questions.
 - [Engineering screening tools](engineering-tools.html): local calculations for resistance, temperature rise, liquid flow, thermal storage, and declared-boundary COP.
+- [Lumped-parameter thermal simulator](lumped-parameter-model.html): a local, exact first-order RC transient model with a plotted temperature history.
+- [Technology atlas](technology-atlas.md) and [state-of-practice guide](state-of-practice.md): application-neutral technology comparison and dated evidence orientation.
 - [Templates](templates/cooling-problem-definition.md): traceable problem-definition, evidence-register, validation-plan, and review materials.
 - [Cold-plate CFD screening case](case-studies/cold-plate-cfd-screening.md): a public-data case study with explicit model limits.
 - [Validation ladder](validation-ladder.md): match the claim to the current evidence and next verification step.

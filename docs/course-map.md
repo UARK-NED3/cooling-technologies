@@ -20,6 +20,9 @@ heat generation + temperature limit + environment
                     |
                     v
        screening decision + evidence needed for design
+                    |
+                    v
+      optional transient model + technology evidence map
 ```
 
 ## Module deliverables
@@ -32,10 +35,11 @@ heat generation + temperature limit + environment
 | 4 | Component-and-loop architecture sketch | Proposed |
 | 5 | Performance metric table | Derived / reported inputs required |
 | 6 | One-page cooling concept memo | Proposed; not a design approval |
+| 7 | One-node transient model and validity check | Derived, screening-level; not a validated hardware prediction |
 
 ## Suggested pacing
 
-Plan 60–100 minutes per module. A learner who wants a compact overview can complete Modules 1–3 and read the summaries of Modules 4–6; a learner developing a concept should complete all six and use the final transfer task.
+Plan 60–100 minutes per core module and about 90 minutes for Module 7. A learner who wants a compact overview can complete Modules 1–3 and read the summaries of Modules 4–6; a learner developing a concept should complete the six core modules and use Module 7 when the heat load or sink changes in time.
 
 For an independent, output-oriented route through the same material, follow the [self-paced study manual](self-paced-study-manual.md). It sequences the modules, specifies the study record and completion evidence, and preserves the distinction between a screening concept and a validated design.
 

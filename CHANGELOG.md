@@ -2,6 +2,13 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.7.0 — 2026-10-17
+
+- Added an application-neutral lumped-parameter modeling module and a local first-order thermal-RC simulator that makes its boundary, inputs, exact solution, and validity limits explicit.
+- Added a technology atlas for mechanism- and system-boundary-based comparison without a false universal ranking.
+- Added a dated state-of-practice guide that links current authoritative source families and an annual-review rule rather than presenting a static literature review as current evidence.
+- Extended the self-paced manual, nomenclature, learning checks, course map, and engineering entry routes for transient screening.
+
 ## 0.6.2 — 2026-10-17
 
 - Corrected the multi-line control-volume energy balance so GitHub Markdown does not interpret its continuation terms as list items.

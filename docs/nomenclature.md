@@ -18,13 +18,16 @@ Unless an equation explicitly says otherwise, heat transfer $\dot{Q}$ is positiv
 | Symbol | Meaning | SI unit | Notes |
 | --- | --- | --- | --- |
 | $A$ | Heat-transfer area | $\mathrm{m^2}$ | State whether the area is wetted, fin, projected, or another defined surface. |
+| $\mathrm{Bi}$ | Biot number, $hL_c/k$ | — | A screening dimensionless group for the stated solid geometry and boundary. |
 | $c_p$ | Specific heat at constant pressure | $\mathrm{J\,kg^{-1}\,K^{-1}}$ | Evaluate for the stated fluid, composition, pressure, and temperature. |
+| $C_{\mathrm{th}}$ | Thermal capacitance | $\mathrm{J\,K^{-1}}$ | A declared lumped storage term; it is not necessarily a material property by itself. |
 | $E$ | Energy | $\mathrm{J}$ | Use $E_{\mathrm{th}}$ for stored thermal energy when clarification is needed. |
 | $h$ | Convective heat-transfer coefficient | $\mathrm{W\,m^{-2}\,K^{-1}}$ | Do not confuse with specific enthalpy $h_{\mathrm{spec}}$. |
 | $h_{fg}$ | Latent enthalpy of vaporization or condensation | $\mathrm{J\,kg^{-1}}$ | Evaluate at the stated saturation pressure. |
 | $h_{\mathrm{spec}}$ | Specific enthalpy | $\mathrm{J\,kg^{-1}}$ | Used in the flowing-control-volume energy balance. |
 | $k$ | Thermal conductivity | $\mathrm{W\,m^{-1}\,K^{-1}}$ | Evaluate for material, direction, and temperature when consequential. |
 | $L$ | Conduction length | $\mathrm{m}$ | Defined along the heat-flow direction. |
+| $L_c$ | Characteristic length for a Biot-number screen | $\mathrm{m}$ | Define it for the stated geometry and boundary. |
 | $m$ | Mass | $\mathrm{kg}$ | |
 | $\dot{m}$ | Mass-flow rate | $\mathrm{kg\,s^{-1}}$ | Positive in the declared flow direction. |
 | $p$ | Pressure | $\mathrm{Pa}$ | State whether absolute or gauge pressure is used. |
@@ -37,6 +40,7 @@ Unless an equation explicitly says otherwise, heat transfer $\dot{Q}$ is positiv
 | $\dot{W}$ | Work or power rate | $\mathrm{W}$ | Positive out of the stated system unless a directional subscript is used. |
 | $x$ | Vapor quality | — | Mass fraction of vapor for an equilibrium two-phase mixture. |
 | $\varepsilon$ | Emissivity | — | Surface property appropriate to the stated spectral/thermal model. |
+| $\tau$ | Thermal time constant | $\mathrm{s}$ | For the one-node model, $\tau=R_{\mathrm{th}}C_{\mathrm{th}}$. |
 | $\rho$ | Density | $\mathrm{kg\,m^{-3}}$ | Evaluate at the stated fluid state. |
 | $\sigma$ | Stefan–Boltzmann constant | $\mathrm{W\,m^{-2}\,K^{-4}}$ | Use with absolute temperature. |
 

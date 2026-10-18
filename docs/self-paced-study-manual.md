@@ -2,9 +2,9 @@
 
 ## What this manual is for
 
-This manual turns the six course modules into a deliberate independent-study pathway. Its goal is a defensible **screening-level** cooling concept: not a component selection, qualified design, safety approval, or credential. Work through the sequence in order because the design decision at the end depends on the heat source, temperature boundary, and model limitations established at the beginning.
+This manual turns the six core course modules and one optional transient-modeling extension into a deliberate independent-study pathway. Its goal is a defensible **screening-level** cooling concept: not a component selection, qualified design, safety approval, or credential. Work through the sequence in order because the design decision at the end depends on the heat source, temperature boundary, and model limitations established at the beginning.
 
-The pathway is designed for approximately 10–11 hours of focused study. It assumes algebra, unit conversion, and energy conservation; it does not assume prior heat-transfer coursework. If you are new to thermal systems, use the longer end of each time range and write out every unit conversion.
+The pathway is designed for approximately 12–13 hours of focused study. It assumes algebra, unit conversion, and energy conservation; it does not assume prior heat-transfer coursework. If you are new to thermal systems, use the longer end of each time range and write out every unit conversion.
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ When a value is unavailable, write “unavailable”; do not replace it with an 
 
 For a concise problem-first route, use [Start by engineering problem](engineering-start-here.md). The [engineering screening tools](engineering-tools.html) provide local, unit-explicit calculations that you can record in this study log.
 
-## Ten- to eleven-hour study plan
+## Twelve- to thirteen-hour study plan
 
 | Session | Time | Study work | Tangible output |
 | --- | ---: | --- | --- |
@@ -34,11 +34,12 @@ For a concise problem-first route, use [Start by engineering problem](engineerin
 | 3. Screen mechanisms | 90 min | Read [Module 3](modules/03-cooling-mechanisms.md); compare at least three mechanisms at the required temperature level | Feasibility table |
 | 4. Sketch the system | 105 min | Read [Module 4](modules/04-system-architectures.md); define source, transport, sink, sensing, and control | Architecture sketch and loop balance |
 | 5. Compare on a common boundary | 75 min | Read [Module 5](modules/05-performance-energy-sustainability.md); state performance metrics and their boundaries | Metric table |
-| 6. Study an applied example | 90 min | Use one [NED3 applied example](ned3-applied-examples.md); distinguish data from claims | One-page evidence sheet |
-| 7. Make and audit the decision | 90 min | Read [Module 6](modules/06-screening-decision.md); write and challenge the concept memo | One-page screening memo |
-| 8. Consolidate | 30 min | Revisit every “assumed” or “blocked” entry and set one next action | Completion checklist |
+| 6. Model a transient | 90 min | Read [Module 7](modules/07-lumped-parameter-models.md); simulate a non-confidential load history | One-node model and validity check |
+| 7. Study an applied example | 90 min | Use one [NED3 applied example](ned3-applied-examples.md); distinguish data from claims | One-page evidence sheet |
+| 8. Make and audit the decision | 90 min | Read [Module 6](modules/06-screening-decision.md); write and challenge the concept memo | One-page screening memo |
+| 9. Consolidate | 30 min | Revisit every “assumed” or “blocked” entry and set one next action | Completion checklist |
 
-The total is about 11 hours including the final review. It is appropriate to split a session over several days; preserve the time basis of the problem when you return.
+The total is about 12–13 hours including the final review. It is appropriate to split a session over several days; preserve the time basis of the problem when you return.
 
 ## Study routine for every session
 
@@ -131,7 +132,19 @@ Neither number is transferable to another condition without matching the source/
 
 **Ready to continue when:** you can say which reported metric would be misleading if its auxiliary loads or operating state were omitted.
 
-### 6. Practice with applied evidence
+### 6. Model a transient
+
+**Engineering question:** Is a load transient or changing sink condition important enough to change the screening decision?
+
+Read [Module 7](modules/07-lumped-parameter-models.md). Use the local [lumped-parameter thermal simulator](lumped-parameter-model.html) with an illustrative or non-confidential problem. Record the node, sink, initial temperature, $R_{\mathrm{th}}$, $C_{\mathrm{th}}$, baseline load, step load, and time basis. Change one input at a time and identify whether the peak temperature, time to limit, or eventual temperature is most sensitive.
+
+**Worked reasoning check.** With $R_{\mathrm{th}}=0.25\ \mathrm{K\,W^{-1}}$ and $C_{\mathrm{th}}=2000\ \mathrm{J\,K^{-1}}$, the time constant is $500\ \mathrm{s}$. A $100\ \mathrm{W}$ step load gives a $25\ \mathrm{K}$ eventual rise in the one-node model. Adding thermal capacitance slows the approach to that rise; it does not reduce the eventual rise unless the heat path or load also changes.
+
+**Common trap:** fitting a smooth one-node trace to a measured temperature while ignoring a separate interface, hot spot, or time-varying sink. A good curve fit does not establish a physically unique resistance or capacitance.
+
+**Ready to continue when:** you can state one observation that would demonstrate the need for a second node or spatial model.
+
+### 7. Practice with applied evidence
 
 Choose one activity from [NED3 applied examples](ned3-applied-examples.md). The examples intentionally cover distinct evidence classes:
 
@@ -144,7 +157,7 @@ Create a one-page evidence sheet: source and version; what was measured, simulat
 
 **Ready to continue when:** your sheet includes one claim you explicitly refuse to make because the evidence does not support it.
 
-### 7. Write the screening memo
+### 8. Write the screening memo
 
 Read [Module 6](modules/06-screening-decision.md). Use the following one-page structure; keep calculation sheets and source records as appendices rather than compressing them into unsupported conclusions.
 
@@ -165,6 +178,7 @@ You have completed the self-paced manual when your study record includes all of 
 - a mechanism comparison with at least one physically justified exclusion;
 - an architecture sketch showing sensing, actuation, and one local failure mode;
 - a performance table with explicit measurement boundaries and operating conditions;
+- a one-node transient screen when the load or sink varies in time, with a stated validity check;
 - one evidence sheet that distinguishes measured, simulated, synthetic, and assumed information as applicable; and
 - a one-page proposed concept memo with a next validation action.
 

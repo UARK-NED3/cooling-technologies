@@ -7,6 +7,7 @@ These resources support further study and detailed analysis. They do not replace
 - **Çengel, Boles, and Kanoglu, _Thermodynamics: An Engineering Approach_, 10th ed.** Use for energy-balance conventions and thermodynamic-property concepts. [Publisher record](https://www.mheducation.com/highered/product/thermodynamics-an-engineering-approach-cengel.html).
 - **Bergman, Lavine, Incropera, and DeWitt, _Fundamentals of Heat and Mass Transfer_, 8th ed.** Use for the heat-transfer rate relations, resistance networks, and validity assumptions developed in Modules 2–5. [Publisher record](https://www.wiley.com/en-us/fundamentals-of-heat-and-mass-transfer-8th-edition-p-9781119353881).
 - **ASHRAE Handbook.** A regularly updated professional reference for HVAC&R fundamentals, systems, equipment, and applications. See the [ASHRAE Handbook overview](https://www.ashrae.org/technical-resources/ashrae-handbook) for edition and access details.
+- **U.S. Department of Energy, Building Technologies—Emerging Technologies.** Public program context for HVAC&R, controls, thermal storage, and building-energy modeling. Use current program material as orientation, not as a site-specific performance claim. [DOE Emerging Technologies](https://www.energy.gov/cmei/buildings/emerging-technologies).
 - **NIST REFPROP.** Reference Fluid Thermodynamic and Transport Properties Database. Use the current fluid model, mixture definition, and property state when high-accuracy refrigerant or working-fluid properties matter. [NIST REFPROP](https://www.nist.gov/srd/refprop).
 - **NIST Chemistry WebBook.** Public thermochemical and thermophysical data for many species; applicability and data source should be checked for each calculation. [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/).
 - **U.S. EPA Section 608.** U.S. requirements and information for stationary refrigeration and air-conditioning refrigerant management. [Stationary Refrigeration and Air Conditioning](https://www.epa.gov/section608).
@@ -19,12 +20,16 @@ The [NED3 applied examples](ned3-applied-examples.md) provide source-bounded act
 
 The local [engineering screening tools](engineering-tools.html) provide transparent first-pass calculations. Record their inputs and limits with the [assumption and evidence register](templates/assumption-evidence-register.md), then use the [validation ladder](validation-ladder.md) before extending a result into a design claim.
 
+The [lumped-parameter thermal simulator](lumped-parameter-model.html) provides an exact solution of a stated one-node RC model. It does not identify physical parameters or validate a hardware transient. Use [Module 7](modules/07-lumped-parameter-models.md) for its boundary, validity, and fidelity discussion, and use the [state-of-practice guide](state-of-practice.md) as a dated source map rather than a frozen literature review.
+
 | Course material | Primary teaching reference | Design-use source still required |
 | --- | --- | --- |
 | Module 1 energy balances | Thermodynamics text above | Actual boundary, flow states, measurements, and duty cycle |
 | Module 2 heat-transfer relations and resistance networks | Heat-transfer text above | Geometry- and regime-matched property data or correlation |
 | Modules 3–5 architectures and performance | Heat-transfer text and current ASHRAE Handbook as applicable | Current equipment data, test method, control boundary, and governing requirements |
 | Module 4 fluid-loop example | Energy balance plus NIST property tools | Actual fluid composition, temperature, pressure, hydraulic network, and local thermal model |
+| Module 7 one-node transient model | Heat-transfer text above | Measured transient, temperature locations, sink history, parameter-identification method, and model residual |
+| Technology atlas and state-of-practice guide | Current ASHRAE/DOE/NIST/EPA source families as applicable | Application-specific requirements, current product data, standards, and validated operating envelope |
 | Professional workshop cases | Course evidence map and facilitator guide | A host-approved configuration and independently reviewed inputs before any design or training claim |
 
 ## Computational practice

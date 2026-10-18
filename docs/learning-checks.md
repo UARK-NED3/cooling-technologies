@@ -31,3 +31,7 @@ Before comparing two reported COP values, check at least: (1) the cooling-duty b
 ## Module 6
 
 An adequate screening memo identifies the protected location, heat load, temperature requirement, sink condition, time basis, model assumptions, candidate architectures, selected concept, dominant uncertainty, and next validation action. If the memo cannot name an input that could change the selection, it is likely hiding uncertainty rather than managing it.
+
+## Module 7
+
+For the one-node example with $R_{\mathrm{th}}=0.25\ \mathrm{K\,W^{-1}}$, $C_{\mathrm{th}}=2000\ \mathrm{J\,K^{-1}}$, and a 100 W step into a 25 °C sink, $\tau=500\ \mathrm{s}$ and the eventual node temperature is 50 °C. At one time constant, the temperature is about 40.8 °C. The model becomes inadequate if a measured interface or interior location has a distinct transient, if the sink or resistance changes materially during the event, or if flow, phase change, and spatial gradients control the protected temperature. The next evidence might be synchronized temperatures at two locations, a sink-temperature history, or a step-load test with a documented boundary.
