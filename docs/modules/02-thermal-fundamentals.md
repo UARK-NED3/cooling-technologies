@@ -10,12 +10,23 @@ You will distinguish sensible and latent heat, use simple heat-transfer relation
 
 ## The four basic heat-transfer mechanisms
 
-| Mechanism | Simplified relation | Governing idea |
-| --- | --- | --- |
-| Conduction | $\dot{Q} = kA\Delta T/L$ | Energy diffuses through a material. |
-| Convection | $\dot{Q} = hA(T_{\mathrm{s}} - T_{\infty})$ | A fluid transports heat from a surface. |
-| Radiation | $\dot{Q} = \varepsilon\sigma A(T_{\mathrm{s}}^4 - T_{\mathrm{sur}}^4)$ | Surfaces exchange thermal radiation. |
-| Phase change | $\dot{Q} = \dot{m}h_{fg}$ | Energy is absorbed or released at nearly constant temperature for a specified pressure. |
+| Mechanism | Governing idea |
+| --- | --- |
+| Conduction | Energy diffuses through a material. |
+| Convection | A fluid transports heat from a surface. |
+| Radiation | Surfaces exchange thermal radiation. |
+| Phase change | Energy is absorbed or released at nearly constant temperature for a specified pressure. |
+
+For the screening conditions stated below, the corresponding relations are
+
+$$
+\begin{aligned}
+\text{Conduction:}\quad & \dot{Q} = \frac{kA\Delta T}{L} \\
+\text{Convection:}\quad & \dot{Q} = hA(T_{\mathrm{s}} - T_{\infty}) \\
+\text{Radiation:}\quad & \dot{Q} = \varepsilon\sigma A(T_{\mathrm{s}}^4 - T_{\mathrm{sur}}^4) \\
+\text{Phase change:}\quad & \dot{Q} = \dot{m}h_{fg}
+\end{aligned}
+$$
 
 Here $k$ is thermal conductivity, $h$ is convective heat-transfer coefficient, $A$ is the relevant area, $L$ is a conduction length, $\varepsilon$ is emissivity, $\sigma$ is the Stefan–Boltzmann constant, and $h_{fg}$ is latent enthalpy. Temperatures in the radiation relation must be absolute temperatures in kelvin. See the [nomenclature](../nomenclature.md) for standard symbols, units, and subscripts.
 

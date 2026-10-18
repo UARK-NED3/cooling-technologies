@@ -2,6 +2,10 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.6.1 — 2026-10-17
+
+- Reorganized the Module 2 mechanism relations into an aligned display equation so the expressions remain legible in the published responsive layout.
+
 ## 0.6.0 — 2026-10-17
 
 - Added textbook-style TeX equation rendering across the GitHub Pages course, including the engineering screening tools.
