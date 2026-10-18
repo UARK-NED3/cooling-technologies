@@ -2,11 +2,11 @@
 
 An open, self-paced introduction to cooling technologies for engineers and technically curious learners.
 
-This repository is the course home. It is structured for direct reading on GitHub and is ready to be served with GitHub Pages from the `main` branch's `/docs` folder.
+This repository and the [published GitHub Pages course](https://uark-ned3.github.io/cooling-technologies/) are paired entry points to the same teaching content on the `main` branch. The repository supports direct reading and reuse; Pages serves the course from the `main` branch's `/docs` folder.
 
 ## Start here
 
-Open the [course home](docs/index.md), then follow the six core modules and the optional lumped-parameter simulation extension. Each module includes learning objectives, a conceptual lesson, a worked engineering check, common failure modes, and a transfer task. Engineers arriving with a specific problem can instead use [Start by engineering problem](docs/engineering-start-here.md), the local [screening tools](docs/engineering-tools.html), the [lumped-parameter simulator](docs/lumped-parameter-model.html), and the [validation ladder](docs/validation-ladder.md).
+Open the [repository course home](docs/index.md) or the [published course home](https://uark-ned3.github.io/cooling-technologies/), then follow the six core modules and the optional lumped-parameter simulation extension. Each module includes learning objectives, a conceptual lesson, a worked engineering check, common failure modes, and a transfer task. Engineers arriving with a specific problem can instead use [Start by engineering problem](docs/engineering-start-here.md), the local [screening tools](docs/engineering-tools.html), the [lumped-parameter simulator](docs/lumped-parameter-model.html), and the [validation ladder](docs/validation-ladder.md).
 
 ## Scope and evidence status
 
@@ -20,6 +20,9 @@ The course explains first-principles, screening-level reasoning about cooling sy
 4. [Cooling-system architectures](docs/modules/04-system-architectures.md)
 5. [Performance, energy, and sustainability](docs/modules/05-performance-energy-sustainability.md)
 6. [A screening-level cooling decision](docs/modules/06-screening-decision.md)
+7. [Lumped-parameter models and simulation](docs/modules/07-lumped-parameter-models.md)
+
+Module 7 is a self-paced extension for first-order transient screening; it includes the local [thermal-RC simulator](docs/lumped-parameter-model.html). The corresponding published pages are [Module 7](https://uark-ned3.github.io/cooling-technologies/modules/07-lumped-parameter-models.html) and the [simulator](https://uark-ned3.github.io/cooling-technologies/lumped-parameter-model.html).
 
 See the [course map](docs/course-map.md), [nomenclature and notation](docs/nomenclature.md), [glossary](docs/glossary.md), and [learning checks](docs/learning-checks.md).
 For primary references, property tools, and evidence practices, see [References and tools](docs/references-and-tools.md) and the [evidence map](docs/evidence-map.md).

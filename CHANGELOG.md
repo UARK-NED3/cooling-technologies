@@ -2,6 +2,10 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.7.2 — 2026-10-17
+
+- Added the Module 7 course entry and direct repository/Pages cross-links to the README so both public entry points expose the same self-paced extension.
+
 ## 0.7.1 — 2026-10-17
 
 - Corrected two Module 7 inline expressions that GitHub Pages rendered as raw TeX text.
