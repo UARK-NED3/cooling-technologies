@@ -19,10 +19,12 @@ $$
 This is a stored-energy balance, not the general energy balance for a flowing control volume. If mass crosses the boundary, its enthalpy flow must be included. With heat positive into the control volume and work positive out of it, a common form is
 
 $$
+\begin{aligned}
 \frac{\mathrm{d}E_{\mathrm{cv}}}{\mathrm{d}t}
-= \dot{Q} - \dot{W}
-+ \sum_{\mathrm{in}} \dot{m}\left(h_{\mathrm{spec}} + \frac{V^2}{2} + gz\right)
-- \sum_{\mathrm{out}} \dot{m}\left(h_{\mathrm{spec}} + \frac{V^2}{2} + gz\right)
+&= \dot{Q} - \dot{W} \\
+&\quad + \sum_{\mathrm{in}} \dot{m}\left(h_{\mathrm{spec}} + \frac{V^2}{2} + gz\right) \\
+&\quad - \sum_{\mathrm{out}} \dot{m}\left(h_{\mathrm{spec}} + \frac{V^2}{2} + gz\right)
+\end{aligned}
 $$
 
 Use the simplest boundary that represents the physical question. The closed-system form is useful for a short transient or thermal-mass estimate; the flowing form is required for a pump loop, ventilation stream, or refrigeration component.

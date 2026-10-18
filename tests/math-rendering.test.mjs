@@ -24,3 +24,11 @@ test('course publishes a canonical nomenclature and uses display math in the the
   assert.match(nomenclature, /Sign convention/);
   assert.match(moduleTwo, /\$\$[\s\S]*?R_\{\\mathrm\{th\}\}[\s\S]*?\$\$/);
 });
+
+test('multiline control-volume balances use a TeX alignment rather than Markdown list syntax', () => {
+  const moduleOne = fs.readFileSync(path.join(repoRoot, 'docs/modules/01-why-cooling-matters.md'), 'utf8');
+
+  assert.match(moduleOne, /\\begin\{aligned\}/);
+  assert.doesNotMatch(moduleOne, /^\+ \\sum_/m);
+  assert.doesNotMatch(moduleOne, /^- \\sum_/m);
+});
