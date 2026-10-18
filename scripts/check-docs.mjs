@@ -10,6 +10,7 @@ const requiredFiles = [
   'LICENSE',
   'docs/index.md',
   'docs/course-map.md',
+  'docs/nomenclature.md',
   'docs/evidence-map.md',
   'docs/references-and-tools.md',
   'docs/accessibility.md',

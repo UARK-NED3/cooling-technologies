@@ -35,15 +35,21 @@ The chain is only as strong as its most restrictive link. A high-performance col
 
 For a well-mixed liquid stream that gains heat from a load,
 
-`Q̇_load = ṁ c_p (T_out − T_in)`
+$$
+\dot{Q}_{\mathrm{load}} = \dot{m}c_p(T_{\mathrm{out}} - T_{\mathrm{in}})
+$$
 
 This relation determines the average fluid temperature rise, not the maximum component temperature. That maximum also depends on the local heat-transfer coefficient, contact resistance, flow maldistribution, and transient behavior.
 
 ### Worked check
 
-A single-phase liquid-water loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative `c_p = 4.0 kJ/(kg K)`,
+A single-phase liquid-water loop removes 5 kW while allowing a 5 K mean fluid temperature rise. Using an illustrative $c_p = 4.0\ \mathrm{kJ\,kg^{-1}\,K^{-1}}$,
 
-`ṁ = 5000 / [(4000)(5)] = 0.25 kg/s`
+$$
+\dot{m} = \frac{\dot{Q}_{\mathrm{load}}}{c_p\Delta T_{\mathrm{fluid}}}
+= \frac{5000\ \mathrm{W}}{(4000\ \mathrm{J\,kg^{-1}\,K^{-1}})(5\ \mathrm{K})}
+= 0.25\ \mathrm{kg\,s^{-1}}
+$$
 
 The value is an assumed near-ambient liquid-water property for this **illustrative screening calculation**. It is not applicable without revision to a glycol mixture, dielectric fluid, refrigerant, or water at a materially different state. The calculation establishes a first-pass mass-flow target. It does **not** provide the required pump head: that depends on pipe geometry, fittings, cold plates, flow regime, fluid properties at the operating state, and parallel-branch distribution.
 

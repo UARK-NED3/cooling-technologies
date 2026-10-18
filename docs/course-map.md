@@ -4,6 +4,8 @@
 
 The course begins with the required temperature control, rather than an equipment label. That ordering matters: a fan, a cold plate, a vapor-compression system, and thermal storage may all be plausible answers to different versions of the same problem, but their feasibility follows from the heat source, temperature level, environment, and allowable resources.
 
+Before beginning a calculation, consult the [nomenclature and notation](nomenclature.md). It is the reference for the symbols and sign conventions used across the modules and engineering workspace.
+
 ```text
 heat generation + temperature limit + environment
                     |

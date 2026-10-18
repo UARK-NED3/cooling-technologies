@@ -12,7 +12,9 @@ You will use basic cooling-performance metrics, distinguish component and system
 
 Metrics are meaningful only when the numerator and denominator refer to the same stated boundary and time period. For a refrigeration unit, the coefficient of performance for cooling is
 
-`COP_R = Q̇_cooling / Ẇ_input`
+$$
+\mathrm{COP}_{\mathrm{R}} = \frac{\dot{Q}_{\mathrm{cooling}}}{\dot{W}_{\mathrm{input}}}
+$$
 
 The cooling duty may be measured at an evaporator or at a load. The input power may include only a compressor or also fans, pumps, controls, and heat-rejection equipment. Both choices can be useful, but they answer different questions. Always report the boundary.
 
@@ -38,11 +40,15 @@ Do not infer a system-level environmental benefit solely from a favorable compon
 
 Suppose a unit removes 10 kW from a load. The compressor uses 2.5 kW, while fans and pumps use 0.5 kW. Then
 
-`COP_compressor boundary = 10 / 2.5 = 4.0`,
+$$
+\mathrm{COP}_{\mathrm{R,compressor}} = \frac{10\ \mathrm{kW}}{2.5\ \mathrm{kW}} = 4.0,
+$$
 
 whereas the system boundary that includes the auxiliaries gives
 
-`COP_system = 10 / (2.5 + 0.5) = 3.33`.
+$$
+\mathrm{COP}_{\mathrm{R,system}} = \frac{10\ \mathrm{kW}}{(2.5 + 0.5)\ \mathrm{kW}} = 3.33.
+$$
 
 Neither result is “more correct” without a stated purpose. The second is generally more suitable for comparing whole cooling systems serving the same load.
 

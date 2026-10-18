@@ -10,5 +10,5 @@
 | Latent heat | Energy transferred during a phase change at a stated pressure, without a temperature change of the pure substance during the phase change. |
 | Sensible heat | Energy transfer associated with a temperature change without phase change. |
 | Temperature lift | Difference between the controlled temperature level and the heat-rejection temperature level. The exact definition depends on system locations. |
-| Thermal resistance | Ratio `ΔT/Q̇`, with units `K/W`, under the specified conditions. |
+| Thermal resistance | Ratio $\Delta T/\dot{Q}$, with units $\mathrm{K\,W^{-1}}$, under the specified conditions. |
 | Transient | A condition in which temperatures, stored energy, flow, or loads vary with time. |

@@ -9,9 +9,9 @@ These activities assess workshop learning at a screening level. They are not a s
 Use the same six prompts before and after the workshop. The pre-assessment identifies starting points; the post-assessment documents individual learning. A suggested passing evidence threshold for a completion record, if a host elects to use one, is 70% of the 12 available points plus participation in both cases. The host remains responsible for any attendance or credential policy.
 
 1. A 120 W device must remain below 60 °C in 25 °C air. Calculate its allowable total source-to-air thermal resistance in K/W. **(2 points)**
-2. State one condition under which `dU/dt = Q̇_in − Q̇_out + Ẇ_in − Ẇ_out` is appropriate, and one condition that requires mass-flow terms. **(2 points)**
+2. State one condition under which $\mathrm{d}U/\mathrm{d}t = \dot{Q}_{\mathrm{in}} - \dot{Q}_{\mathrm{out}} + \dot{W}_{\mathrm{in}} - \dot{W}_{\mathrm{out}}$ is appropriate, and one condition that requires mass-flow terms. **(2 points)**
 3. Name two assumptions required for the simplified radiation relation used in Module 2. **(2 points)**
-4. A liquid-water loop removes 6 kW with an allowed mean fluid rise of 4 K. Use the stated illustrative `c_p = 4.0 kJ/(kg K)` to estimate mass flow in kg/s. **(2 points)**
+4. A liquid-water loop removes 6 kW with an allowed mean fluid rise of 4 K. Use the stated illustrative $c_p = 4.0\ \mathrm{kJ\,kg^{-1}\,K^{-1}}$ to estimate mass flow in kg/s. **(2 points)**
 5. Give one reason that a correct bulk-fluid energy balance cannot prove that a component junction is below its limit. **(2 points)**
 6. Label these inputs as measured, reported, assumed, derived, or unknown: a data-sheet dissipation value, a calculated flow rate, a not-yet-measured interface resistance, and a thermocouple reading. **(2 points)**
 
@@ -28,7 +28,7 @@ Use the same six prompts before and after the workshop. The pre-assessment ident
 
 ## Case B — Liquid-loop flow is not a cold-plate design
 
-**Scenario.** A distributed electronics load rejects 8 kW to a single-phase liquid-water loop. The team allows a 7 K mean fluid temperature rise across the load. For an illustrative first-pass calculation only, use `c_p = 4.0 kJ/(kg K)` for liquid water near ambient conditions.
+**Scenario.** A distributed electronics load rejects 8 kW to a single-phase liquid-water loop. The team allows a 7 K mean fluid temperature rise across the load. For an illustrative first-pass calculation only, use $c_p = 4.0\ \mathrm{kJ\,kg^{-1}\,K^{-1}}$ for liquid water near ambient conditions.
 
 **Evidence status.** All numerical inputs and the constant property are illustrative assumptions. The energy balance estimates an average loop-flow target only; it does not define pump head, pressure rating, cold-plate thermal resistance, or the maximum component temperature.
 

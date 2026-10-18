@@ -32,11 +32,18 @@ Evaporative cooling does not cool air below its thermodynamic wet-bulb limit for
 
 Consider the 2 kW battery-module heat pulse in Module 1. Over 10 minutes, the heat generated during the pulse is
 
-`Q = Q̇ t = (2000 W)(600 s) = 1.2 MJ`
+$$
+E_{\mathrm{th}} = \dot{Q}_{\mathrm{gen}}t
+= (2000\ \mathrm{W})(600\ \mathrm{s}) = 1.2\ \mathrm{MJ}
+$$
 
 If a thermal mass is allowed to rise by 10 K and has a representative specific heat of `4 kJ/(kg K)`, the idealized mass required is
 
-`m = 1.2 × 10⁶ / [(4000)(10)] = 30 kg`
+$$
+m = \frac{E_{\mathrm{th}}}{c_p\Delta T}
+= \frac{1.2 \times 10^6\ \mathrm{J}}{(4000\ \mathrm{J\,kg^{-1}\,K^{-1}})(10\ \mathrm{K})}
+= 30\ \mathrm{kg}
+$$
 
 This result is illustrative: it ignores heat transfer into the mass, packaging, nonuniform temperature, heat loss, and the need to reject stored heat after the pulse. It nevertheless shows why transient duty cycle can change the feasible mechanism.
 

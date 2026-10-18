@@ -17,6 +17,7 @@ test('professional-education governance files remain release requirements', (t) 
   const errors = validateCourseFiles(temporaryRoot);
 
   assert.ok(errors.includes('Missing required file: docs/accessibility.md'));
+  assert.ok(errors.includes('Missing required file: docs/nomenclature.md'));
   assert.ok(errors.includes('Missing required file: docs/maintenance-and-governance.md'));
   assert.ok(errors.includes('Missing required file: docs/ned3-applied-examples.md'));
   assert.ok(errors.includes('Missing required file: docs/self-paced-study-manual.md'));

@@ -58,7 +58,7 @@ Use the [NED3 applied examples](ned3-applied-examples.md) to replace or extend a
 8. State the radiation-model enclosure and temperature assumptions.
 9. State the pressure and quality assumptions for phase-change heat transfer.
 10. Compare air, liquid, two-phase, and refrigeration-enabled architectures.
-11. Estimate liquid-loop flow from `Q̇ = ṁ c_p ΔT`.
+11. Estimate liquid-loop flow from $\dot{Q}_{\mathrm{load}} = \dot{m}c_p\Delta T_{\mathrm{fluid}}$.
 12. Separate energy-balance flow sizing from hydraulic and local thermal design.
 13. Identify maldistribution, contact, recirculation, and control failure modes.
 14. Define performance metrics with an explicit system boundary.

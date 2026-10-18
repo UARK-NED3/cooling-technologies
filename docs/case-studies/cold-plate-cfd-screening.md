@@ -32,7 +32,9 @@ For the selected case, record both heat fluxes, both inlet mass-flow rates, and 
 
 Use a liquid-loop balance only when the fluid identity, property state, total heat load, and temperature locations are documented:
 
-`Q̇ = ṁ c_p (T_out − T_in)`
+$$
+\dot{Q}_{\mathrm{load}} = \dot{m}c_p(T_{\mathrm{out}} - T_{\mathrm{in}})
+$$
 
 This relation gives a bulk-fluid energy check. It does not reproduce a local chip temperature, establish convergence, or validate the CFD result. A disagreement can indicate a boundary mismatch, property-state mismatch, incomplete heat accounting, or a different output definition.
 

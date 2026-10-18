@@ -27,6 +27,8 @@ After completing the course, you should be able to:
 
 Work through one module at a time. Before reading a worked example, estimate the answer and its units. Record each stated assumption; changing an assumption can change the appropriate technology. Complete the learning check at the end of each module, then compare your reasoning with the guide in [Learning checks](learning-checks.md).
 
+Use the [nomenclature and notation](nomenclature.md) whenever you write or check an equation. It defines the course-wide symbols, subscripts, units, and energy-balance sign convention.
+
 The expected self-study time is approximately 8–12 hours, excluding optional reading and any hands-on project. The study manual organizes this material into a roughly 10–11-hour pathway; it is not a credentialed or instructor-graded program.
 
 ## Professional workshop option

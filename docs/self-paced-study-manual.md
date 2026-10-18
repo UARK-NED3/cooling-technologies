@@ -67,7 +67,7 @@ Read [Module 1](modules/01-why-cooling-matters.md). Draw a box around the protec
 
 **Engineering question:** Which source-to-sink resistance dominates the protected temperature?
 
-Read [Module 2](modules/02-thermal-fundamentals.md). Draw each series path from source through interface, spreader, heat exchanger, transport fluid or air, and sink. Use `R_th = ΔT / Q̇` only where a linear resistance approximation is defensible.
+Read [Module 2](modules/02-thermal-fundamentals.md). Draw each series path from source through interface, spreader, heat exchanger, transport fluid or air, and sink. Use $R_{\mathrm{th}} = \Delta T/\dot{Q}$ only where a linear resistance approximation is defensible; use the [nomenclature](nomenclature.md) to define every temperature location and subscript.
 
 **Worked reasoning check.** For a 120 W source and a series path of `0.05 + 0.04 + 0.18 = 0.27 K/W`, the predicted rise is `(120 W)(0.27 K/W) = 32.4 K`. At a 25 °C sink, the source estimate is 57.4 °C. This is a derived screening result, not a measured temperature. Halving the air-side resistance produces a larger change than halving the smaller spreader resistance, so the air side is the first improvement target in this stated model.
 
@@ -87,7 +87,13 @@ Read [Module 3](modules/03-cooling-mechanisms.md). Compare at least three candid
 |  |  |  |  |
 |  |  |  |  |
 
-**Worked reasoning check.** If a 1.2 MJ pulse is stored in a material allowed to warm by 10 K with an illustrative `c_p = 4 kJ/(kg K)`, the idealized mass is `1.2 × 10⁶ J / [(4,000 J/(kg K))(10 K)] = 30 kg`. This bounds only the energy-storage requirement; it does not prove that heat can enter the storage material quickly enough or that the material can recharge between pulses.
+**Worked reasoning check.** If a $1.2\ \mathrm{MJ}$ pulse is stored in a material allowed to warm by $10\ \mathrm{K}$ with an illustrative $c_p = 4\ \mathrm{kJ\,kg^{-1}\,K^{-1}}$, the idealized mass is
+
+$$
+m = \frac{1.2 \times 10^6\ \mathrm{J}}{(4000\ \mathrm{J\,kg^{-1}\,K^{-1}})(10\ \mathrm{K})} = 30\ \mathrm{kg}.
+$$
+
+This bounds only the energy-storage requirement; it does not prove that heat can enter the storage material quickly enough or that the material can recharge between pulses.
 
 **Ready to continue when:** you have ruled out at least one option with a stated physical condition, rather than a preference label.
 
@@ -97,7 +103,13 @@ Read [Module 3](modules/03-cooling-mechanisms.md). Compare at least three candid
 
 Read [Module 4](modules/04-system-architectures.md). Sketch the chain `source → interface → transport → heat exchanger → sink`, then add sensors, actuators, and one failure path. For a single-phase loop, distinguish average fluid rise from maximum component temperature.
 
-**Worked reasoning check.** A 5 kW water loop allowed to rise by 5 K gives a first-pass flow target of `ṁ = 5,000 W / [(4,000 J/(kg K))(5 K)] = 0.25 kg/s`. The result cannot choose a pump because pressure drop, fluid state, pipe and cold-plate geometry, fittings, and branch distribution are outside this balance.
+**Worked reasoning check.** A $5\ \mathrm{kW}$ water loop allowed to rise by $5\ \mathrm{K}$ gives a first-pass flow target of
+
+$$
+\dot{m} = \frac{5000\ \mathrm{W}}{(4000\ \mathrm{J\,kg^{-1}\,K^{-1}})(5\ \mathrm{K})} = 0.25\ \mathrm{kg\,s^{-1}}.
+$$
+
+The result cannot choose a pump because pressure drop, fluid state, pipe and cold-plate geometry, fittings, and branch distribution are outside this balance.
 
 **Common trap:** treating a well-mixed return temperature as evidence that every parallel branch is adequately cooled.
 
@@ -109,7 +121,13 @@ Read [Module 4](modules/04-system-architectures.md). Sketch the chain `source �
 
 Read [Module 5](modules/05-performance-energy-sustainability.md). Choose metrics appropriate to your concept: useful heat duty, maximum protected temperature, inlet and sink conditions, electrical input, pressure drop, water use, refrigerant inventory, or storage loss. For every metric, declare the numerator, denominator, system boundary, and time basis.
 
-**Worked reasoning check.** A unit removing 10 kW with a 2.5 kW compressor input has `COP = 4.0` at a compressor-only boundary. If fans and pumps add 0.5 kW, the system-level result is `10 / 3.0 = 3.33`. Neither number is transferable to another condition without matching the source/sink temperatures, humidity or flow state, part-load condition, and measurement boundary.
+**Worked reasoning check.** A unit removing $10\ \mathrm{kW}$ with a $2.5\ \mathrm{kW}$ compressor input has $\mathrm{COP}_{\mathrm{R,compressor}} = 4.0$. If fans and pumps add $0.5\ \mathrm{kW}$, the system-level result is
+
+$$
+\mathrm{COP}_{\mathrm{R,system}} = \frac{10\ \mathrm{kW}}{3.0\ \mathrm{kW}} = 3.33.
+$$
+
+Neither number is transferable to another condition without matching the source/sink temperatures, humidity or flow state, part-load condition, and measurement boundary.
 
 **Ready to continue when:** you can say which reported metric would be misleading if its auxiliary loads or operating state were omitted.
 

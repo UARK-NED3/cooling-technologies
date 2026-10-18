@@ -2,6 +2,12 @@
 
 All notable changes to the course are documented here. Versions describe the released teaching material, not a professional credential or a validated engineering design package.
 
+## 0.6.0 — 2026-10-17
+
+- Added textbook-style TeX equation rendering across the GitHub Pages course, including the engineering screening tools.
+- Added a course-wide nomenclature with SI units, subscript rules, temperature-location guidance, and an explicit energy-balance sign convention.
+- Converted governing relations and worked calculations in the modules, study manual, cases, assessment, and facilitator material to shared notation.
+
 ## 0.5.2 — 2026-10-17
 
 - Improved the interactive tool-card layout so each calculation result is displayed on its own readable row.

@@ -21,7 +21,7 @@ The course explains first-principles, screening-level reasoning about cooling sy
 5. [Performance, energy, and sustainability](docs/modules/05-performance-energy-sustainability.md)
 6. [A screening-level cooling decision](docs/modules/06-screening-decision.md)
 
-See the [course map](docs/course-map.md), [glossary](docs/glossary.md), and [learning checks](docs/learning-checks.md).
+See the [course map](docs/course-map.md), [nomenclature and notation](docs/nomenclature.md), [glossary](docs/glossary.md), and [learning checks](docs/learning-checks.md).
 For primary references, property tools, and evidence practices, see [References and tools](docs/references-and-tools.md) and the [evidence map](docs/evidence-map.md).
 
 ## Professional-education pathway

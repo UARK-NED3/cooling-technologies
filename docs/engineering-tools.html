@@ -9,6 +9,7 @@ title: Engineering screening tools
   .tool-card label { display: block; font-weight: 600; margin-top: .65rem; }
   .tool-card input { box-sizing: border-box; width: 100%; padding: .45rem; }
   .tool-card button { margin-top: 1rem; }
+  .tool-card .equation { margin: .75rem 0; overflow-x: auto; }
   .tool-result { background: #f3f8f5; border-left: .3rem solid #159957; display: block; margin-top: 1rem; padding: .75rem; }
   .tool-result[data-status="error"] { background: #fff4f4; border-left-color: #b00020; }
 </style>
@@ -17,12 +18,12 @@ title: Engineering screening tools
 
 <p>These browser-based tools support transparent first-pass calculations. They do not transmit or save your inputs. Every result is <strong>derived, screening-level evidence</strong>: use actual fluid properties, geometry, operating state, pressure drop, controls, safety requirements, and validation before design or procurement.</p>
 
-<p>All inputs use SI units. Record the system boundary, source, units, and evidence status of each input in the <a href="templates/assumption-evidence-register.html">assumption and evidence register</a>.</p>
+<p>All inputs use SI units. Use the <a href="nomenclature.html">nomenclature</a> for shared symbols and sign conventions, then record the system boundary, source, units, and evidence status of each input in the <a href="templates/assumption-evidence-register.html">assumption and evidence register</a>.</p>
 
 <div class="tool-grid">
   <form class="tool-card" data-calculator="resistance">
     <h2>Allowable thermal resistance</h2>
-    <p><code>R<sub>th,max</sub> = (T<sub>limit</sub> − T<sub>sink</sub>) / Q̇</code></p>
+    <div class="equation">$$R_{\mathrm{th,allow}} = \frac{T_{\mathrm{lim}} - T_{\mathrm{sink}}}{\dot{Q}_{\mathrm{load}}}$$</div>
     <label>Temperature limit (°C)<input name="limit-temperature" type="number" value="60" step="any" required></label>
     <label>Sink temperature (°C)<input name="sink-temperature" type="number" value="25" step="any" required></label>
     <label>Heat load (W)<input name="heat-load" type="number" value="120" min="0.000001" step="any" required></label>
@@ -32,7 +33,7 @@ title: Engineering screening tools
 
   <form class="tool-card" data-calculator="rise">
     <h2>Resistance-network temperature rise</h2>
-    <p><code>ΔT = Q̇ R<sub>th</sub></code></p>
+    <div class="equation">$$\Delta T = \dot{Q}_{\mathrm{load}}R_{\mathrm{th}}$$</div>
     <label>Heat load (W)<input name="heat-load" type="number" value="120" min="0.000001" step="any" required></label>
     <label>Total thermal resistance (K/W)<input name="thermal-resistance" type="number" value="0.27" min="0.000001" step="any" required></label>
     <button type="submit">Calculate</button>
@@ -41,7 +42,7 @@ title: Engineering screening tools
 
   <form class="tool-card" data-calculator="flow">
     <h2>Single-phase liquid-flow target</h2>
-    <p><code>ṁ = Q̇ / (c<sub>p</sub> ΔT<sub>fluid</sub>)</code></p>
+    <div class="equation">$$\dot{m} = \frac{\dot{Q}_{\mathrm{load}}}{c_p\Delta T_{\mathrm{fluid}}}$$</div>
     <label>Heat load (W)<input name="heat-load" type="number" value="5000" min="0.000001" step="any" required></label>
     <label>Specific heat (J/(kg·K))<input name="specific-heat" type="number" value="4000" min="0.000001" step="any" required></label>
     <label>Permitted mean fluid rise (K)<input name="permitted-rise" type="number" value="5" min="0.000001" step="any" required></label>
@@ -51,7 +52,7 @@ title: Engineering screening tools
 
   <form class="tool-card" data-calculator="storage">
     <h2>Sensible thermal-storage mass</h2>
-    <p><code>m = E / (c<sub>p</sub> ΔT)</code></p>
+    <div class="equation">$$m = \frac{E_{\mathrm{th}}}{c_p\Delta T}$$</div>
     <label>Stored energy (J)<input name="energy" type="number" value="1200000" min="0.000001" step="any" required></label>
     <label>Specific heat (J/(kg·K))<input name="specific-heat" type="number" value="4000" min="0.000001" step="any" required></label>
     <label>Permitted storage rise (K)<input name="permitted-rise" type="number" value="10" min="0.000001" step="any" required></label>
@@ -61,7 +62,7 @@ title: Engineering screening tools
 
   <form class="tool-card" data-calculator="cop">
     <h2>Declared-boundary COP</h2>
-    <p><code>COP<sub>R</sub> = Q̇<sub>cooling</sub> / Ẇ<sub>input</sub></code></p>
+    <div class="equation">$$\mathrm{COP}_{\mathrm{R}} = \frac{\dot{Q}_{\mathrm{cooling}}}{\dot{W}_{\mathrm{input}}}$$</div>
     <label>Cooling duty (kW)<input name="cooling-duty" type="number" value="10" min="0.000001" step="any" required></label>
     <label>Compressor input (kW)<input name="compressor-input" type="number" value="2.5" step="any" required></label>
     <label>Auxiliary input: fans, pumps, controls (kW)<input name="auxiliary-input" type="number" value="0.5" step="any" required></label>
